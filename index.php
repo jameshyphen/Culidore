@@ -40,29 +40,10 @@ if(isset($_GET['l'])){
 
 
 }
-
 ?>
 
 </script>
-<?php
-echo "Test voor github te zien wat er veranderd is";
-for ($x = 0; $x<5; $x++){
-	echo "Test";
-}
-echo "Test voor github te zien wat er veranderd is";
-for ($x = 0; $x<5; $x++){
-	echo "Test";
-}
-echo "Test voor github te zien wat er veranderd is";
-for ($x = 0; $x<5; $x++){
-	echo "Test";
-}
-echo "Test voor github te zien wat er veranderd is";
-for ($x = 0; $x<5; $x++){
-	echo "Test";
-}
 
-?>
 
 <script>
 function regDown(){
