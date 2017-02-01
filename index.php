@@ -96,7 +96,6 @@ if ($conn)
 				echo "<div class='mainpagina' onclick='closelogintje();'><div class='venster'>
 				</div>";
 			}
-			$test = "1234";
 			?>
 			
 			<table class="receptentabellen"  style="cursor:pointer" id="tabrec<?=$xrec?>">
