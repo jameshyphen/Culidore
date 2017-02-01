@@ -69,102 +69,107 @@ include('db.php');
 if ($conn)
 {
 	$vraag = 'select naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst from tblrecepten';
-	if ($result = mysqli_query($conn, $vraag))
-	{
-		$xrec = 0;
-		while ($row = mysqli_fetch_assoc($result))
-		{	
-			$xrec++;
-			echo "<script> 
+	if ($result = mysqli_query($conn, $vraag)) {
+        $xrec = 0;
+        while ($row = mysqli_fetch_assoc($result)) {
+            $xrec++;
+            echo "<script> 
 			$(document).ready(function(){
-				$('#tabrec".$xrec."').click(function(){
+				$('#tabrec" . $xrec . "').click(function(){
 					$('.logintje').slideUp('fast');
 					$('.registratie').slideUp('fast');
 					$('.venster').fadeIn('fast');
 					$('.recepttoevoegen').slideUp('fast');
 					$('.gelogged').fadeOut('fast');
-					$('#rec".$xrec."').fadeToggle('fast');
+					$('#rec" . $xrec . "').fadeToggle('fast');
 					});
 			
 				$('.venster').click(function(){
-					$('#rec".$xrec."').fadeOut('fast');
+					$('#rec" . $xrec . "').fadeOut('fast');
 					});
 				}); 
 			</script>";
-			
-			if($xrec==1){
-				echo "<div class='mainpagina' onclick='closelogintje();'><div class='venster'>
+
+            if ($xrec == 1) {
+                echo "<div class='mainpagina' onclick='closelogintje();'><div class='venster'>
 				</div>";
-			}
-			?>
-			
-			<table class="receptentabellen"  style="cursor:pointer" id="tabrec<?=$xrec?>">
-<?php			
-			echo '<tr>';
-			echo '<td colspan="2">'.$row['naam'].'</td>';
-			echo '</tr>';
-			echo '<tr>';
-			echo '<td colspan="2">'.$row['Tijdgeplaatst'].'</td>';
-			echo '</tr>';
-			echo '<tr>';
-			echo '<td colspan="2"><img width="200px" height="200px" src="'.$row['foto'].'"</td>';
-			echo '<tr>';
-			echo '<td colspan="2">Gepublished door: '.$row['Username'].'</td>';
-			echo '</tr>';
-			echo '<tr>';
-			echo '<td colspan="2">'.$row['omschrijving'].'</td>';
-			echo '</tr>';
-			echo '<tr>';
-			echo '<td>';
-			for($x=0;$x<$row['prijs'];$x++){
-				echo '<div class="ratrat"><img width="20px" height="20px" src="http://www.freeiconspng.com/uploads/dollar-round-icon--18.png"></div>'; 
-			}
-			
-			
-			
-			echo '</td>';
-			echo '<td>';
-			for($x=0;$x<$row['rating'];$x++){
-				echo '<div class="ratrat"><img width="20px" height="20px" src="http://icons.iconarchive.com/icons/icons8/christmas-flat-color/256/star-icon.png"></div>'; 
-			}
-			
-			echo '</td>';
-			echo '</table>';
-			
-			
-			echo "<div class='receptdiv' id='rec".$xrec."'>";
-			echo '<table class="receptentabellen">';
-			echo '<tr>';
-			echo '<td colspan="2">'.$row['naam'].'</td>';
-			echo '</tr>';
-			echo '<tr>';
-			echo '<td colspan="2">'.$row['Tijdgeplaatst'].'</td>';
-			echo '</tr>';
-			echo '<tr>';
-			echo '<td colspan="2"><img width="200px" height="200px" src="'.$row['foto'].'"</td>';
-			echo '<tr>';
-			echo '<td colspan="2">Gepublished door: '.$row['Username'].'</td>';
-			echo '</tr>';
-			echo '<tr>';
-			echo '<td colspan="2">'.$row['omschrijving'].'</td>';
-			echo '</tr>';
-			echo '<tr>';
-			echo '<td>';
-			for($x=0;$x<$row['prijs'];$x++){
-				echo '<div class="ratrat"><img width="20px" height="20px" src="http://www.freeiconspng.com/uploads/dollar-round-icon--18.png"></div>'; 
-			}	
-			echo '</td>';
-			echo '<td>';
-			for($x=0;$x<$row['rating'];$x++){
-				echo '<div class="ratrat"><img width="20px" height="20px" src="http://icons.iconarchive.com/icons/icons8/christmas-flat-color/256/star-icon.png"></div>'; 
-			}
-			echo '</td>';
-			echo '</table>';		
-			echo "</div>";
-		}
-		
-		
-	}
+            }
+            $test = "1234";
+            ?>
+
+            <table class="receptentabellen" style="cursor:pointer" id="tabrec<?= $xrec ?>">
+
+                <tr>
+                    <td colspan="2"><?= $row['naam'] ?></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><?= $row['Tijdgeplaatst'] ?></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><img width="200px" height="200px" src="<?= $row['foto'] ?>"</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Gepublished door: <?= $row['Username'] ?></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><?= $row['omschrijving'] ?></td>
+                </tr>
+                <tr>
+                    <td>
+                        <?php
+                        for ($x = 0; $x < $row['prijs']; $x++) {
+                            echo '<div class="ratrat"><img width="20px" height="20px" src="http://www.freeiconspng.com/uploads/dollar-round-icon--18.png"></div>';
+                        }
+                        ?>
+
+
+                    </td>
+                    <td>
+                        <?php
+
+                        for ($x = 0; $x < $row['rating']; $x++) {
+                            echo '<div class="ratrat"><img width="20px" height="20px" src="http://icons.iconarchive.com/icons/icons8/christmas-flat-color/256/star-icon.png"></div>';
+                        }
+                        ?>
+                    </td>
+            </table>
+            <div class="receptdiv" id="rec<?= $xrec ?>">
+                <table class="receptentabellen">
+                    <tr>
+                        <td colspan="2"><?= $row['naam'] ?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><?= $row['Tijdgeplaatst'] ?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><img width="200px" height="200px" src="<?= $row['foto'] ?>"</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Gepublished door: <?= $row['Username'] ?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><?= $row['omschrijving'] ?></td>
+                    </tr>
+                    <tr>
+                        <?php
+
+
+                        for ($x = 0; $x < $row['prijs']; $x++) {
+                            echo '<td></td><div class="ratrat"><img width="20px" height="20px" src="http://www.freeiconspng.com/uploads/dollar-round-icon--18.png"></div>';
+                        }
+                        echo '</td>';
+                        echo '<td>';
+                        for ($x = 0; $x < $row['rating']; $x++) {
+                            echo '<div class="ratrat"><img width="20px" height="20px" src="http://icons.iconarchive.com/icons/icons8/christmas-flat-color/256/star-icon.png"></div>';
+                        }
+                        ?>
+                    </tr>
+                </table>
+            </div>
+            <?php
+        }
+
+    }
 	else
 	{
 		echo 'Geen resultaat';
@@ -218,84 +223,84 @@ else
 
 
 <div class="logintje" id="logindivetje">
-<div class="errortjezz">
-<a>
-<?php
-if(isset($_GET['lv'])){
-	
-	if($_GET['lv']=='p'){
-		echo "Verkeerde wachtwoord of gebruikersnaam";
-}}
-?>
-</a>
+    <div class="errortjezz">
+        <a>
+            <?php
+            if(isset($_GET['lv'])){
+
+                if($_GET['lv']=='p'){
+                    echo "Verkeerde wachtwoord of gebruikersnaam";
+                }}
+            ?>
+        </a>
+    </div>
+    <div class="success">
+        <a>
+            <?php
+            if(isset($_GET['lv'])){
+                if($_GET['lv']=='s'){
+                    echo "Je bent nu ingelogd!";
+                }
+
+            }
+            echo "</a>";
+            echo "</div>";
+            if(isset($_SESSION['gebruiker'])){
+                echo "</div><div class='gelogged'>";
+                echo "<div class='accountinstellingen'><ul>";
+                echo "<li><a style='cursor:pointer' class='loginknop'>Instellingen</a></li>";
+                echo "<li><a style='cursor:pointer' class='loginknop'>Probleem Aanmelden</a></li>";
+
+                if(isset($_SESSION['admin'])){
+                    echo"<li><a style='cursor:pointer' class='loginknop'>Problemen bekijken</a></li>";
+                }
+                echo "<li><a style='cursor:pointer' class='loginknop' href='logout.php' style='cursor:pointer' value='play'>Uitloggen</a></li>";
+                echo "</ul></div>";
+
+            }
+            else{
+
+                echo "<form class='formlogin' action='login.php'  method='Post'>";
+                echo "	<div class='loginuser'>";
+                echo "		<a class='usertekst'>Gebruikersnaam</a></br>";
+                echo "		<input type='txtText' name='gebruiker' id='gebruiker'>";
+                echo "	</div>";
+                echo "	<div class='loginpassje'>";
+                echo "		<a class='passjetekst'>Wachtwoord</a></br>";
+                echo "		<input type='password' name='passwoord' id='passwoord'>";
+                echo "	</div>";
+                echo "	<div class='btn'>";
+                echo "		<input type='submit' name='BUTNlogin' value='Login' class='btnlogin'>";
+                echo "	</div>";
+            }
+            ?>
+
+    </div>
 </div>
-<div class="success">
-<a>
-<?php	
-if(isset($_GET['lv'])){
-	if($_GET['lv']=='s'){
-		echo "Je bent nu ingelogd!";
-	}
-	
-}
-echo "</a>";
-echo "</div>";
-if(isset($_SESSION['gebruiker'])){
-	echo "</div><div class='gelogged'>";
-	echo "<div class='accountinstellingen'><ul>";
-	echo "<li><a style='cursor:pointer' class='loginknop'>Instellingen</a></li>";
-	echo "<li><a style='cursor:pointer' class='loginknop'>Probleem Aanmelden</a></li>";
-	
-	if(isset($_SESSION['admin'])){
-		echo"<li><a style='cursor:pointer' class='loginknop'>Problemen bekijken</a></li>";
-	}
-	echo "<li><a style='cursor:pointer' class='loginknop' href='logout.php' style='cursor:pointer' value='play'>Uitloggen</a></li>";
-	echo "</ul></div>";
-	
-}
-else{
-	
-	echo "<form class='formlogin' action='login.php'  method='Post'>";
-	echo "	<div class='loginuser'>";
-	echo "		<a class='usertekst'>Gebruikersnaam</a></br>";
-	echo "		<input type='txtText' name='gebruiker' id='gebruiker'>";
-	echo "	</div>";
-	echo "	<div class='loginpassje'>";
-	echo "		<a class='passjetekst'>Wachtwoord</a></br>";
-	echo "		<input type='password' name='passwoord' id='passwoord'>";
-	echo "	</div>";
-	echo "	<div class='btn'>";
-	echo "		<input type='submit' name='BUTNlogin' value='Login' class='btnlogin'>";
-	echo "	</div>";
-}
-?>
-
-</div>
-</form>
 
 
 
 
-<script>
+    <script>
 
 
 
-$(document).ready(function(){
-    $("#loginknop").click(function(){
-        $("#logindivetje").fadeToggle("fast");
-		$(".registratie").slideUp("fast");
-		$(".venster").fadeOut("fast");
-		$(".recepttoevoegen").slideUp("fast");
-		$(".gelogged").fadeOut("fast");
-		$(".receptdiv").slideUp("fast");
-    });
-});
+        $(document).ready(function(){
+            $("#loginknop").click(function(){
+                $("#logindivetje").fadeToggle("fast");
+                $(".registratie").slideUp("fast");
+                $(".venster").fadeOut("fast");
+                $(".recepttoevoegen").slideUp("fast");
+                $(".gelogged").fadeOut("fast");
+                $(".receptdiv").slideUp("fast");
+            });
+        });
 
-function closelogintje(){
-        $("#logintje").slideUp("fast");
-		
-    
-}
+        function closelogintje(){
+            $("#logintje").slideUp("fast");
+
+
+        }
 $(document).ready(function(){
     $("#signupknop").click(function(){
 		$(".registratie").fadeIn(300);
@@ -426,7 +431,7 @@ if(isset($_GET['e'])){
 
 			</div>
 			<div class="divrating">
-				<a class="rating">Omschrijving</br>
+                <a class="rating">Omschrijving</a></br>
 				<input type="txtText" name="Omschrijving" id="RAT" required="" >
 			</div>
 			<div class="divprijs">
