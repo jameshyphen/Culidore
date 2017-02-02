@@ -107,6 +107,10 @@ if ($conn)
         <div class='venster'>
         </div>";
             }
+            $time = strtotime($row['Tijdgeplaatst']);
+
+            $newformat = date('d-F-Y',$time);
+
 
             ?>
 
@@ -116,10 +120,10 @@ if ($conn)
                     <td colspan="2"><?= $row['naam'] ?></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><?= $row['Tijdgeplaatst'] ?></td>
+                    <td colspan="2"><?= $newformat ?></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><img width="200px" height="200px" src="<?= $row['foto'] ?>"</td>
+                    <td colspan="2"><img id="fotosss" width="200px"   height="200px" src="<?= $row['foto'] ?>"</td>
                 </tr>
                 <tr>
                     <td colspan="2">Gepublished door: <?= $row['Username'] ?></td>
@@ -146,39 +150,9 @@ if ($conn)
                         ?>
                     </td>
             </table>
-            <div class="receptdiv" id="rec<?= $xrec ?>"><!--dit is waar wij tabellen die geclickt worden genereren-->
-                <table class="receptentabellen">
-                    <tr>
-                        <td colspan="2"><?= $row['naam'] ?></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><?= $row['Tijdgeplaatst'] ?></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><img width="200px" height="200px" src="<?= $row['foto'] ?>"</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Gepublished door: <?= $row['Username'] ?></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><?= $row['omschrijving'] ?></td>
-                    </tr>
-                    <tr>
-                        <?php
-
-                        echo "<td>";
-                        for ($x = 0; $x < $row['prijs']; $x++) {
-                            echo '<div class="ratrat"><img width="20px" height="20px" src="http://www.freeiconspng.com/uploads/dollar-round-icon--18.png"></div>';
-                        }
-                        echo '</td>';
-                        echo '<td>';
-                        for ($x = 0; $x < $row['rating']; $x++) {
-                            echo '<div class="ratrat"><img width="20px" height="20px" src="http://icons.iconarchive.com/icons/icons8/christmas-flat-color/256/star-icon.png"></div>';
-                        }
-                        ?>
-                        </td>
-                    </tr>
-                </table>
+            <div style="overflow-y: scroll;" class="receptdiv" id="rec<?= $xrec ?>"><!--dit is waar wij divs genereren bij het clicken op recepten-->
+                <b><a id="titelreceptdiv"><?=$row['naam']?></a></b>
+                <img src="<?=$row['foto']?>" id="fotodivrecept">
             </div>
             <?php
         }
