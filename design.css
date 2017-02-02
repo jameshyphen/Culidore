@@ -424,12 +424,15 @@ body{
 	border: 1px solid black;
 	Background-color:white;
 	border-radius: 15px;
-	border-collapse: yes;
+	border-collapse: collapse;
 	display:inline-block;
-	margin: 25px 25px;
+	margin-left:15px;
+	margin-top:15px;
 	border-width: 2px;
 	border-color: #811412;
 	border-radius: 7px;
+	height:400px;
+	width:300px;
 }
 .ratrat{
 	display:inline-block;
@@ -511,4 +514,29 @@ body{
     animation-name: registratieformpje;
     animation-duration: .7s;
 	display:none;
+}
+
+#fotodivrecept{
+
+	background-repeat: no-repeat;
+	width: 350px;
+	height: auto;
+	position:absolute;
+	top:80px;
+	right:15px;
+}
+#fototabel{
+	left:50px;
+	width:200px;
+	border-radius:50%;
+}
+
+#fotosss{
+	border-radius:50%;
+	margin-left:50px;
+
+}
+
+#titelreceptdiv{
+font-size:34px;
 }
