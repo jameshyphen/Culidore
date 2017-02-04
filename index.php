@@ -152,7 +152,25 @@ if ($conn)
             </table>
             <div style="overflow-y: scroll;" class="receptdiv" id="rec<?= $xrec ?>"><!--dit is waar wij divs genereren bij het clicken op recepten-->
                 <b><a id="titelreceptdiv"><?=$row['naam']?></a></b>
-                <img src="<?=$row['foto']?>" id="fotodivrecept">
+                <?php
+
+                for($x=0;$x<5;$x++){
+                    echo '<div onclick="ster'.$x.'();" id="'.$x.'ster" class="ratezelf"><img onclick="ster'.$x.'();" width="30px" height="30px"		
+	src="http://icons.iconarchive.com/icons/icons8/christmas-flat-color/256/star-icon.png"></div>';
+                    echo '<script>function ster'.$x.'(){';
+                    for($y=0;$y<$x+1;$y++){
+                        echo '
+		document.getElementById("'.$y.'ster").style.opacity = "1";';
+                    }
+                    for($y=$x+1;$y<6;$y++){
+                        echo '
+		document.getElementById("'.$y.'ster").style.opacity = "0.3";';
+                    }
+                    echo "}</script>";
+                }
+
+
+                ?>
             </div>
             <?php
         }
@@ -164,6 +182,7 @@ if ($conn)
     }
     mysqli_close($conn);
 }
+
 ?>
 
 </div>
@@ -203,7 +222,11 @@ if ($conn)
         <li class="unchosen"><a href="favorieten.php"><img src="http://puu.sh/rWePO/c996637cbe.png" alt="logo" width="35px" height="35px"></a></li>
         <li class="unchosen"><a href="browsen.php"><img src="http://puu.sh/rWeYR/693b8db04d.png" alt="logo" width="35px" height="35px"></a></li>
         <li class="unchosen"><a href="fridgemode.php"><img src="http://puu.sh/rWf8v/424be36917.png" alt="logo" width="35px" height="35px"></a></li>
-        <a class="circle" href="#">+</a>
+        <?php
+        if(isset($_SESSION['gebruiker'])){
+            echo " <a class=\"circle\" href=\"#\">+</a>";
+            }?>
+
     </ul>
 
 </div>
@@ -219,6 +242,11 @@ if ($conn)
                 if($_GET['lv']=='p'){
                     echo "Verkeerde wachtwoord of gebruikersnaam";
                 }}
+            if(isset($_GET['lv'])){
+
+                if($_GET['pr']=='p'){
+                    echo "Verkeerde wachtwoord of gebruikersnaam";
+                }}
             ?>
         </a>
     </div>
@@ -231,19 +259,25 @@ if ($conn)
                 }
 
             }
+            if(isset($_GET['pr'])){
+                if($_GET['pr']=='s'){
+                    echo "Probleem is aangemeld";
+                }
+
+            }
             echo "</a>";
             echo "</div>";
             if(isset($_SESSION['gebruiker'])){?>
     </div><div class='gelogged'>
         <div class='accountinstellingen'><ul>
-                <li><a style='cursor:pointer' class='loginknop'>Instellingen</a></li>
-                <li><a style='cursor:pointer' class='loginknop'>Probleem Aanmelden</a></li>
+                <li><a style='cursor:pointer' class='instellingen'>Instellingen</a></li>
+                <li><a style='cursor:pointer' class='aanmeldprobleem'>Probleem Aanmelden</a></li>
 
                 <?php
                 if($admin){
-                    echo"<li><b><a style='cursor:pointer' class='loginknop'>Problemen bekijken</a></b></li>";
+                    echo"<li><b><a style='cursor:pointer' class='probleembekijk'>Problemen bekijken</a></b></li>";
                 }?>
-                <li><a style='cursor:pointer' class='loginknop' href='logout.php' style='cursor:pointer' value='play'>Uitloggen</a></li>
+                <li><a style='cursor:pointer' class='uitloggen' href='logout.php' style='cursor:pointer' value='play'>Uitloggen</a></li>
             </ul></div>
         <?php
         }
@@ -305,9 +339,10 @@ if ($conn)
         $(".venster").click(function(){
             $(".registratie").slideUp(300);
             $(".logindivetje").slideUp("fast");
-            $(".venster").fadeToggle(300);
+            $(".venster").fadeOut(300);
             $(".recepttoevoegen").slideUp("fast");
-            $(".gelogged").fadeOut("fast");
+            $(".gelogged").slideUp("fast");
+            $(".probleemtoevoegen").slideUp("fast");
 
         });
     });
@@ -315,10 +350,11 @@ if ($conn)
     $(document).keyup(function(e) {
         if (e.which === 27){
             $(".registratie").slideUp(300);
+            $(".logindivetje").slideUp("fast");
             $(".venster").fadeOut(300);
-            $("#logindivetje").slideUp("fast");
             $(".recepttoevoegen").slideUp("fast");
-            $(".gelogged").fadeOut("fast");
+            $(".gelogged").slideUp("fast");
+            $(".probleemtoevoegen").slideUp("fast");
             $(".receptdiv").slideUp("fast");
         }});
 
@@ -339,6 +375,7 @@ if ($conn)
             $(".recepttoevoegen").slideDown("fast");
             $(".gelogged").fadeOut("fast");
             $(".receptdiv").slideUp("fast");
+            $(".probleemtoevoegen").slideUp("fast");
         });
     });
 
@@ -350,8 +387,21 @@ if ($conn)
             $(".recepttoevoegen").slideUp("fast");
             $(".gelogged").fadeToggle("fast");
             $(".receptdiv").slideUp("fast");
+            $(".probleemtoevoegen").slideUp("fast");
         });
     });
+    $(document).ready(function(){
+        $(".aanmeldprobleem").click(function(){
+            $(".logintje").slideUp("fast");
+            $(".registratie").slideUp("fast");
+            $(".venster").fadeIn("fast");
+            $(".recepttoevoegen").slideUp("fast");
+            $(".gelogged").fadeOut("fast");
+            $(".receptdiv").slideUp("fast");
+            $(".probleemtoevoegen").fadeToggle("fast");
+        });
+    });
+
 
 </script>
 
@@ -445,7 +495,18 @@ if ($conn)
         </div>
         <input type="submit" name="Toevoegen" value="Toevoegen">
     </form>
+</div>
+<div class="probleemtoevoegen">
+    <form id="probleemform" class="probleemtoevoeg" action="probleem.php" method="Post">
 
+        <div class="omschrijving">
+            <a class="titelgerecht">Beschrijf je probleem:</a></br></br>
+            <textarea rows="4" cols="50" name="probleembeschrijf" form="probleemform"></textarea>
+        </div></br>
+
+        <input type="submit" name="Toevoegen" value="Toevoegen">
+    </form>
+</div>
 
 </body>
 </html>

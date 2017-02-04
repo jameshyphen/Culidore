@@ -1,30 +1,27 @@
 <?php
 include('db.php');
 session_start();
-if (isset($_SESSION['gebruiker']))
-{
+
     $gebruiker = $_SESSION['gebruiker'];
-    $titel = $_POST['Titel'];
-    $omschrijving = $_POST['Omschrijving'];
-    $prijs = $_POST['Prijs'];
-    $soort = $_POST['Soort'];
-    $foto = $_POST['foto'];
-    $bereiding = $_POST['bereiding'];
-    $location = "index.php";
-    $rating = "0";
+
+    $probleem = $_POST['probleembeschrijf'];
+
     $datum = date("Y-n-d");
-    $foto = pathinfo($_FILES['picture']['name'], PATHINFO_FILENAME);
+
 
     // maak recept aan
-    $sql = "INSERT INTO tblrecepten(id, naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst) VALUES('', '$titel', '$rating', '$prijs', '$soort', '$omschrijving', '$foto', '$bereiding', '$gebruiker', '$datum')";
-    mysqli_query($conn, $sql);
+    $sql = "INSERT INTO Problemen(Omschrijving, Bugfix, gebruiker, datum) VALUES ('$probleem',false,'$gebruiker','$datum')";
+    $result = mysqli_query($conn, $sql);
     // terug naar index pagina
-    header('location:index.php');
+
+
+
+if($result){
+    header("location:index.php?pr=s&l=1");
 }
 else
 {
-    //foutcode
-    echo "Kan recept niet toevoegen";
+    header("location:index.php?pr=p&l=1");
 }
 mysqli_close($conn);
 ?>

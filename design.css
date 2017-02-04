@@ -540,3 +540,25 @@ body{
 #titelreceptdiv{
 font-size:34px;
 }
+.probleemtoevoegen {
+	border-radius: 7px;
+	position:fixed;
+	padding-left:5%;
+	padding-top:3%;
+	left:25%;
+	top: 20%;
+	opacity:1;
+	width: 50%;
+	height:60%;
+	background-color: #F8FBFD;
+	animation-name: registratieformpje;
+	animation-duration: .7s;
+	display:none;
+}
+.ratezelf {
+	display:inline-block;
+	opacity:0.3;
+}
+.ratezelf:hover{
+	opacity:0.6;
+}
