@@ -123,7 +123,7 @@ if ($conn)
                     <td colspan="2"><?= $newformat ?></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><img id="fotosss" width="200px"   height="200px" src="<?= $row['foto'] ?>"</td>
+                    <td colspan="2"><img id="fotosss" width="150px"   height="150px" src="<?= $row['foto'] ?>"</td>
                 </tr>
                 <tr>
                     <td colspan="2">Gepublished door: <?= $row['Username'] ?></td>
@@ -155,16 +155,17 @@ if ($conn)
                 <?php
 
                 for($x=0;$x<5;$x++){
-                    echo '<div onclick="ster'.$x.'();" id="'.$x.'ster" class="ratezelf"><img onclick="ster'.$x.'();" width="30px" height="30px"		
+                    echo '<div onclick="ster'.$x.$xrec.'();" id="'.$x.$xrec.'ster" class="ratezelf">
+                    <img onclick="ster'.$x.'();" width="30px" height="30px"		
 	src="http://icons.iconarchive.com/icons/icons8/christmas-flat-color/256/star-icon.png"></div>';
-                    echo '<script>function ster'.$x.'(){';
+                    echo '<script>function ster'.$x.$xrec.'(){';
                     for($y=0;$y<$x+1;$y++){
                         echo '
-		document.getElementById("'.$y.'ster").style.opacity = "1";';
+		document.getElementById("'.$y.$xrec.'ster").style.opacity = "1";';
                     }
                     for($y=$x+1;$y<6;$y++){
                         echo '
-		document.getElementById("'.$y.'ster").style.opacity = "0.3";';
+		document.getElementById("'.$y.$xrec.'ster").style.opacity = "0.3";';
                     }
                     echo "}</script>";
                 }
@@ -192,7 +193,10 @@ if ($conn)
 
     <ul>
         <a><img src="Finished.png" alt="logo"></a>
-
+        <?php
+        if(isset($_SESSION['gebruiker'])){
+            echo " <a class=\"circle\" href=\"#\">+</a>";
+        }?>
         <?php
 
         if (isset($_SESSION['gebruiker']))
@@ -216,20 +220,7 @@ if ($conn)
 
 </div>
 
-<div class="menuvanlinks"  onclick="closelogintje();">
-    <ul id="logo">
-        <li class="chosen"><a><img src="http://puu.sh/rWd4i/0d3e6da086.png" alt="logo" width="35px" height="35px"></a></li>
-        <li class="unchosen"><a href="favorieten.php"><img src="http://puu.sh/rWePO/c996637cbe.png" alt="logo" width="35px" height="35px"></a></li>
-        <li class="unchosen"><a href="browsen.php"><img src="http://puu.sh/rWeYR/693b8db04d.png" alt="logo" width="35px" height="35px"></a></li>
-        <li class="unchosen"><a href="fridgemode.php"><img src="http://puu.sh/rWf8v/424be36917.png" alt="logo" width="35px" height="35px"></a></li>
-        <?php
-        if(isset($_SESSION['gebruiker'])){
-            echo " <a class=\"circle\" href=\"#\">+</a>";
-            }?>
 
-    </ul>
-
-</div>
 
 
 
@@ -242,7 +233,7 @@ if ($conn)
                 if($_GET['lv']=='p'){
                     echo "Verkeerde wachtwoord of gebruikersnaam";
                 }}
-            if(isset($_GET['lv'])){
+            if(isset($_GET['pr'])){
 
                 if($_GET['pr']=='p'){
                     echo "Verkeerde wachtwoord of gebruikersnaam";
@@ -275,7 +266,7 @@ if ($conn)
 
                 <?php
                 if($admin){
-                    echo"<li><b><a style='cursor:pointer' class='probleembekijk'>Problemen bekijken</a></b></li>";
+                    echo"<li><b><a style='cursor:pointer' href='problemen.php' class='probleembekijk'>Problemen bekijken</a></b></li>";
                 }?>
                 <li><a style='cursor:pointer' class='uitloggen' href='logout.php' style='cursor:pointer' value='play'>Uitloggen</a></li>
             </ul></div>
