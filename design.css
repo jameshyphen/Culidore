@@ -12,7 +12,7 @@ body{
 	height:100%;
 	display: flex;
 	flex-direction: column;
-	background-color:#333;
+	background-color:#3d0000;
 }
 
 
@@ -154,6 +154,8 @@ body{
 	margin-top:5px;
 	margin-right:50px;
 	padding-right:20px;
+	position:relative;
+	left:30px;
 
 }
 
@@ -570,7 +572,15 @@ body{
 	position:relative;
 
 }
-.tablebugfixes, td, th {
+.tablebugfixes{
+	border: 1px solid #811412;
+	border-collapse: collapse;
+}
+.tablebugfixes td{
+	border: 1px solid #811412;
+	border-collapse: collapse;
+}
+.tablebugfixes tr{
 	border: 1px solid #811412;
 	border-collapse: collapse;
 }
@@ -598,4 +608,14 @@ body{
 	line-height:12px;
 	padding:25px 0;
 	height:50px;
+}
+.checkbuxx{
+	display:none;
+}
+
+.fixed{
+	color:dodgerblue;
+}
+.notfixed{
+	color:orangered;
 }

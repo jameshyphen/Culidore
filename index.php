@@ -192,7 +192,7 @@ if ($conn)
 
 
     <ul>
-        <a><img src="Finished.png" alt="logo"></a>
+        <a href="index.php"><img  src="Finished.png" alt="logo"></a>
         <?php
         if(isset($_SESSION['gebruiker'])){
             echo " <a class=\"circle\" href=\"#\">+</a>";
@@ -228,6 +228,7 @@ if ($conn)
     <div class="errortjezz">
         <a>
             <?php
+
             if(isset($_GET['lv'])){
 
                 if($_GET['lv']=='p'){
@@ -243,7 +244,13 @@ if ($conn)
     </div>
     <div class="success">
         <a>
+
             <?php
+            if(isset($_GET['re'])){
+                if($_GET['re']=="s"){
+                    echo"Registratie voltooid";
+                }
+            }
             if(isset($_GET['lv'])){
                 if($_GET['lv']=='s'){
                     echo "Je bent nu ingelogd!";

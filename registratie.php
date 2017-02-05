@@ -23,9 +23,9 @@ else if($passwoord == $passwoordopnieuw)
 {
     // maak gebruiker aan
     // encrypteren van passwoord
-    $sql = "INSERT INTO Gebruikers(voornaam, achternaam, gebruiker, email, passwoord, admin) VALUES('$voornaam', '$achternaam', '$gebruiker', '$email', '$encryptpass', 0)";
-    
-    header("location: index.php"); // terug naar index pagina
+    $sql = "INSERT INTO Gebruikers(voornaam, achternaam, gebruiker, email, passwoord) VALUES('$voornaam', '$achternaam', '$gebruiker', '$email', '$encryptpass')";
+    mysqli_query($conn, $sql);
+    header("location: index.php?l=1&re=s"); // terug naar index pagina
   }
   else{
 	$location .= "e=p";
