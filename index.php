@@ -169,7 +169,9 @@ if ($conn)
                     }
                     echo "}</script>";
                 }
-
+				echo "<br>";
+                echo "<br>";
+                echo $row['bereiding'];
 
                 ?>
             </div>
@@ -461,7 +463,7 @@ if ($conn)
     </form>
 </div>
 <div class="recepttoevoegen">
-    <form class="voegrecept" action="recept.php" method="Post">
+    <form class="voegrecept" action="recept.php" method="Post" enctype="multipart/form-data">
 
         <div class="titelgerecht">
             <a class="titelgerecht">Titel gerecht</a></br>
@@ -489,10 +491,10 @@ if ($conn)
             </select>
         </div>
         <div class="divfoto">
-            <input type="file" name="Foto" id="fileToUpload" size=35>
+            <input type="file" name="Foto" accept="image/*" size=35>
         </div>
         <input type="submit" name="Toevoegen" value="Toevoegen">
-    </form>
+       </form>
 </div>
 <div class="probleemtoevoegen">
     <form id="probleemform" class="probleemtoevoeg" action="probleem.php" method="Post">
