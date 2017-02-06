@@ -12,7 +12,7 @@ body{
 	height:100%;
 	display: flex;
 	flex-direction: column;
-	background-color:#333;
+	background-color:#3d0000;
 }
 
 
@@ -154,6 +154,8 @@ body{
 	margin-top:5px;
 	margin-right:50px;
 	padding-right:20px;
+	position:relative;
+	left:30px;
 
 }
 
@@ -367,7 +369,7 @@ body{
 	color:black;
 }
 .recepttoevoegen input{
-
+	width:160px;
 	border-style: solid;
 	border-width: 2px;
 	border-color: rgba(0,0,0,0.4);
@@ -570,7 +572,15 @@ body{
 	position:relative;
 
 }
-.tablebugfixes, td, th {
+.tablebugfixes{
+	border: 1px solid #811412;
+	border-collapse: collapse;
+}
+.tablebugfixes td{
+	border: 1px solid #811412;
+	border-collapse: collapse;
+}
+.tablebugfixes tr{
 	border: 1px solid #811412;
 	border-collapse: collapse;
 }
@@ -598,4 +608,79 @@ body{
 	line-height:12px;
 	padding:25px 0;
 	height:50px;
+}
+.checkbuxx{
+	display:none;
+}
+
+.fixed{
+	color:dodgerblue;
+}
+.notfixed{
+	color:orangered;
+}
+.bereiding a{
+	text-decoration: none;
+	background-color: #7d7d7d;
+	color:white;
+}
+
+.textareaomschrijving {
+	position: absolute;
+
+}
+.divprijs{
+	position:relative;
+	top:40px;
+}
+.divbereiding{
+	position:relative;
+	top:40px;
+	width:50%;
+}
+.divomschrijving{
+	position:relative;
+	left:50%;
+	width:50%;
+}
+.fotoinputdiv{
+	 position:relative;
+	 top:40px;
+ }
+.divinputknop{
+	position:relative;
+	top:25px;
+}
+.fotoinputdiv {
+	position: relative;
+	overflow: hidden;
+	margin: 10px;
+}
+.fotoinputdiv input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+
+#upload_button {
+	display: none;
+
+	border: 0px;
+	background: linear-gradient(180deg, #3d0000, #811412);
+	border-radius: 3px;
+
+	color: #fff;
+
+	padding: 5px;
+}
+.divfoto{
+	position:relative;
+	top:30px;
 }

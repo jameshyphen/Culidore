@@ -41,7 +41,11 @@
     ?>
 
 </script>
-
+<script>
+    if(typeof window.history.pushState == 'function') {
+        window.history.pushState({}, "Hide", "problemen.php");
+    }
+</script>
 
 <script>
     function regDown(){
@@ -67,7 +71,7 @@ include('db.php');
 if ($conn)
 {
     if(isset($_SESSION['gebruiker'])){
-        $vraag = "select admin from Gebruikers where gebruiker='".$_SESSION['gebruiker']."'";
+        $vraag = "select id, admin from Gebruikers where gebruiker='".$_SESSION['gebruiker']."'";
         if ($result = mysqli_query($conn, $vraag)) {
             while ($row = mysqli_fetch_assoc($result)){
                 if($row['admin']==1){
@@ -76,7 +80,7 @@ if ($conn)
             }}}}
 if ($conn)
 {
-$vraag = "select Omschrijving, Bugfix, gebruiker, datum from Problemen";
+$vraag = "select id,Omschrijving, Bugfix, gebruiker, datum from Problemen";
 echo "<div class='mainpagina' onclick='closelogintje();'>
         <div class='venster'>
         </div>";
@@ -100,15 +104,15 @@ if ($result = mysqli_query($conn, $vraag)) {
 
     while ($row = mysqli_fetch_assoc($result)) {
         if($row['Bugfix']){
-            $bugfix = "Fixed";
+            $bugfix = "<a class='fixed'>Fixed</a>";
         }
         else{
-            $bugfix = "Not fixed";
+            $bugfix = "<a class='notfixed'>Not fixed</a>";
         }
         $time = strtotime($row['datum']);
-
+        $idx = $row['id'];
         $newformat = date('d-F-Y', $time);
-        ?>
+        ?><?php if($admin) : ?>
         <tr>
             <td>
                 <?=$row['Omschrijving']?>
@@ -124,11 +128,17 @@ if ($result = mysqli_query($conn, $vraag)) {
             <td>
                 <?=$newformat?>
             </td>
-            <td>
-                <a class="circle2" href="#">✓</a>
+            <td><?php
+                if($row['Bugfix']==false){
+                    echo"<form method=\"POST\" action=\"fixprobleem.php\">
+                    <input class=\"checkbuxx\" name=\"probl\" value=\"$idx\" checked type=\"text\">
+                    <input type=\"submit\" value=\"✓\">
+                </form>";
+                }?>
+
             </td>
         </tr>
-
+        <?php endif; ?>
 
 
 
@@ -153,7 +163,7 @@ else
 
 
     <ul>
-        <a><img src="Finished.png" alt="logo"></a>
+        <a href="index.php"><img  src="Finished.png" alt="logo"></a>
         <?php
         if(isset($_SESSION['gebruiker'])){
             echo " <a class=\"circle\" href=\"#\">+</a>";
@@ -199,6 +209,11 @@ else
                 if($_GET['pr']=='p'){
                     echo "Verkeerde wachtwoord of gebruikersnaam";
                 }}
+            if(isset($_GET['prob'])){
+
+                if($_GET['prob']=='nf'){
+                    echo "Probleem met probleem fixen";
+                }}
             ?>
         </a>
     </div>
@@ -214,6 +229,12 @@ else
             if(isset($_GET['pr'])){
                 if($_GET['pr']=='s'){
                     echo "Probleem is aangemeld";
+                }
+
+            }
+            if(isset($_GET['prob'])){
+                if($_GET['prob']=='f'){
+                    echo "Probleem is gefixed";
                 }
 
             }
@@ -233,6 +254,8 @@ else
             </ul></div>
         <?php
         }
+
+
         else{?>
 
             <form class='formlogin' action='login.php'  method='Post'>
