@@ -167,12 +167,11 @@ if ($conn)
                         echo '
 		document.getElementById("'.$y.$xrec.'ster").style.opacity = "0.3";';
                     }
-                    echo "}</script>";
+                    echo "}</script>";                    
                 }
-				echo "<br>";
+                echo "<br>";
                 echo "<br>";
                 echo $row['bereiding'];
-
                 ?>
             </div>
             <?php
@@ -194,7 +193,7 @@ if ($conn)
 
 
     <ul>
-        <a href="index.php"><img  src="Finished.png" alt="logo"></a>
+        <a><img src="Finished.png" alt="logo"></a>
         <?php
         if(isset($_SESSION['gebruiker'])){
             echo " <a class=\"circle\" href=\"#\">+</a>";
@@ -230,7 +229,6 @@ if ($conn)
     <div class="errortjezz">
         <a>
             <?php
-
             if(isset($_GET['lv'])){
 
                 if($_GET['lv']=='p'){
@@ -246,13 +244,7 @@ if ($conn)
     </div>
     <div class="success">
         <a>
-
             <?php
-            if(isset($_GET['re'])){
-                if($_GET['re']=="s"){
-                    echo"Registratie voltooid";
-                }
-            }
             if(isset($_GET['lv'])){
                 if($_GET['lv']=='s'){
                     echo "Je bent nu ingelogd!";
@@ -507,6 +499,5 @@ if ($conn)
         <input type="submit" name="Toevoegen" value="Toevoegen">
     </form>
 </div>
-
 </body>
 </html>

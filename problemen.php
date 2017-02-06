@@ -41,11 +41,7 @@
     ?>
 
 </script>
-<script>
-    if(typeof window.history.pushState == 'function') {
-        window.history.pushState({}, "Hide", "problemen.php");
-    }
-</script>
+
 
 <script>
     function regDown(){
@@ -101,18 +97,18 @@ if ($result = mysqli_query($conn, $vraag)) {
                     Datum
                 </td>
               </tr>";
-    $xpro=0;
+
     while ($row = mysqli_fetch_assoc($result)) {
         if($row['Bugfix']){
-            $bugfix = "<a class='fixed'>Fixed</a>";
+            $bugfix = "Fixed";
         }
         else{
-            $bugfix = "<a class='notfixed'>Not fixed</a>";
+            $bugfix = "Not fixed";
         }
         $time = strtotime($row['datum']);
-        $xpro++;
+
         $newformat = date('d-F-Y', $time);
-        ?><?php if($admin) : ?>
+        ?>
         <tr>
             <td>
                 <?=$row['Omschrijving']?>
@@ -128,17 +124,11 @@ if ($result = mysqli_query($conn, $vraag)) {
             <td>
                 <?=$newformat?>
             </td>
-            <td><?php
-                if($row['Bugfix']==false){
-                    echo"<form method=\"POST\" action=\"fixproblem.php\">
-                    <input class=\"checkbuxx\" name=\"probl\" value=\"$xpro\" checked type=\"text\">
-                    <input type=\"submit\" value=\"✓\">
-                </form>";
-                }?>
-
+            <td>
+                <a class="circle2" href="#">✓</a>
             </td>
         </tr>
-        <?php endif; ?>
+
 
 
 
@@ -163,7 +153,7 @@ else
 
 
     <ul>
-        <a href="index.php"><img  src="Finished.png" alt="logo"></a>
+        <a><img src="Finished.png" alt="logo"></a>
         <?php
         if(isset($_SESSION['gebruiker'])){
             echo " <a class=\"circle\" href=\"#\">+</a>";
@@ -209,11 +199,6 @@ else
                 if($_GET['pr']=='p'){
                     echo "Verkeerde wachtwoord of gebruikersnaam";
                 }}
-            if(isset($_GET['prob'])){
-
-                if($_GET['prob']=='nf'){
-                    echo "Probleem met probleem fixen";
-                }}
             ?>
         </a>
     </div>
@@ -229,12 +214,6 @@ else
             if(isset($_GET['pr'])){
                 if($_GET['pr']=='s'){
                     echo "Probleem is aangemeld";
-                }
-
-            }
-            if(isset($_GET['prob'])){
-                if($_GET['prob']=='f'){
-                    echo "Probleem is gefixed";
                 }
 
             }
@@ -254,8 +233,6 @@ else
             </ul></div>
         <?php
         }
-
-
         else{?>
 
             <form class='formlogin' action='login.php'  method='Post'>

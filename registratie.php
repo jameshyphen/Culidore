@@ -25,11 +25,12 @@ else if($passwoord == $passwoordopnieuw)
     // encrypteren van passwoord
     $sql = "INSERT INTO Gebruikers(voornaam, achternaam, gebruiker, email, passwoord) VALUES('$voornaam', '$achternaam', '$gebruiker', '$email', '$encryptpass')";
     mysqli_query($conn, $sql);
-    header("location: index.php?l=1&re=s"); // terug naar index pagina
+    header("location: index.php"); // terug naar index pagina
   }
-  else{
-	$location .= "e=p";
-	$location .= "&r=1";
+  else
+  {
+	   $location .= "e=p";
+	   $location .= "&r=1";
     header('Location: '.$location);
     
 	
