@@ -1,4 +1,6 @@
-<?php if ($conn)
+<?php
+include('db.php');
+if ($conn)
 {
 $vraag = 'select id, naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst from tblrecepten';
 if ($result = mysqli_query($conn, $vraag)) {

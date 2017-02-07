@@ -1,92 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://use.fontawesome.com/3008661bde.js"></script>
-<script src ="civem.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<style>
-
-</style>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="design.css" />
-    <title>Culidore</title>
-</head>
-<script>
-    if(typeof window.history.pushState == 'function') {
-        window.history.pushState({}, "Hide", "index");
-    }
-</script>
-<body>
-
-<script>
-    <?php
-    $admin = false;
-
-    session_start();
-    if(isset($_GET['r'])){
-        if($_GET['r']==1){
-            echo "document.addEventListener('DOMContentLoaded', function() {
-  regDown();
-});";
-        }
-
-
-    }
-    if(isset($_GET['l'])){
-        if($_GET['l']==1){
-            echo "document.addEventListener('DOMContentLoaded', function() {
-  logDown();
-});";
-        }
-
-
-    }
-    ?>
-
-</script>
-
-
-<script>
-    function regDown(){
-        $(".registratie").fadeToggle(300);
-        $(".venster").fadeToggle(300);
-    }
-    function logDown(){
-        $(".logintje").fadeToggle(300);
-        $(".receptdiv").slideUp("fast");
-
-    }
-    function instellDown(){
-        $(".gelogged").fadeToggle(300);
-
-    }
-</script>
-
-
-
-
-<?php
-include('ifadmin.php');
-include('showrecept.php');
-?>
-
-</div>
-<script>
-    function confirmationDelete(anchor)
-    {
-        var conf = confirm('Wil jij dit recept zeker verwijderen?');
-        if(conf)
-            window.location=anchor.attr("href");
-    }
-</script>
-
-<?php
-include('menuvanboven.php');
-include('logindiv.php');
-include('scriptsonclick.php');
+<?php include('sources.php')
 ?>
 <script>
     $(document).ready(function(){
@@ -175,11 +87,52 @@ include('scriptsonclick.php');
             $(".probleemtoevoegen").fadeToggle("fast");
         });
     });
+    function confirmationDelete(anchor)
+    {
+        var conf = confirm('Wil jij dit recept zeker verwijderen?');
+        if(conf)
+            window.location=anchor.attr("href");
+    }
+    function regDown(){
+        $(".registratie").fadeToggle(300);
+        $(".venster").fadeToggle(300);
+    }
+    function logDown(){
+        $(".logintje").fadeToggle(300);
+        $(".receptdiv").slideUp("fast");
+
+    }
+    function instellDown(){
+        $(".gelogged").fadeToggle(300);
+
+    }
+
+
+    <?php
+    $admin = false;
+
+    session_start();
+    if(isset($_GET['r'])){
+        if($_GET['r']==1){
+            echo "document.addEventListener('DOMContentLoaded', function() {
+  regDown();
+});";
+        }
+
+
+    }
+    if(isset($_GET['l'])){
+        if($_GET['l']==1){
+            echo "document.addEventListener('DOMContentLoaded', function() {
+  logDown();
+});";
+        }
+
+
+    }
+    ?>
+    if(typeof window.history.pushState == 'function') {
+        var currentLocation = window.location;
+        window.history.pushState({}, "Hide", currentLocation);
+    }
 </script>
-<?php
-include('registerdiv.php');
-include('recepttoevoegendiv.php');
-include('probleemtoevoegen.php');
-?>
-</body>
-</html>
