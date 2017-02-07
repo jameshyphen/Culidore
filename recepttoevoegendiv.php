@@ -7,17 +7,17 @@
 
         </div>
         <div class="divomschrijving">
-            <a class="rating">Omschrijving</a></br>
-            <textarea class="textareaomschrijving" name="Omschrijving" style="width:250px;height:130px;" required data-errormessage-value-missing="Vul dit veld in"></textarea>
+            <a class="rating">Bereiding</a></br>
+            <textarea class="textareaomschrijving" name="textareaomschrijving" style="width:90%;height:230px;" required data-errormessage-value-missing="Vul dit veld in"></textarea>
         </div>
         <div class="divprijs">
             <a class="prijs">Prijs 1-5</a></br>
             <input type="txtText" name="Prijs" id="PRI" required data-errormessage-value-missing="Vul dit veld in">
         </div>
         <div class="divbereiding">
-            <a class="bereiding">Bereiding</a></br>
+            <a class="bereiding">Omschrijving</a></br>
 
-            <textarea name="Bereiding" style="width:250px;height:100px;" required data-errormessage-value-missing="Vul dit veld in"></textarea>
+            <textarea  name="Bereiding" style="width90%;height:100px;" required data-errormessage-value-missing="Vul dit veld in"></textarea>
         </div>
 
         <div class="divprijs">

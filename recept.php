@@ -28,7 +28,7 @@ if (isset($_SESSION['gebruiker']))
     $sql = "INSERT INTO tblrecepten(id, naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst) VALUES('', '$titel', '$rating', '$prijs', '$soort', '$omschrijving', '$filepath', '$bereiding', '$gebruiker', '$datum')";
     mysqli_query($conn, $sql);
     // terug naar index pagina
-    header('location:index.php');
+    header('location:index.php?l=1&reto=s');
 }
 else
 {

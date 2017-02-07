@@ -47,14 +47,14 @@ if ($conn)
             ?><?php if($admin) : ?>
                 <tr>
                     <td>
-                        <?=$row['Omschrijving']?>
+                        <?=htmlspecialchars($row['Omschrijving'], ENT_QUOTES, 'UTF-8');?>
                     </td>
                     <td>
                         <?=$bugfix?>
                     </td>
 
                     <td>
-                        <?=$row['gebruiker']?>
+                        <?=htmlspecialchars($row['gebruiker'], ENT_QUOTES, 'UTF-8');?>
                     </td>
 
                     <td>

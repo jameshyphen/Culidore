@@ -1,5 +1,5 @@
 <div style="overflow-y: scroll;" class="receptdiv" id="rec<?= $xrec ?>"><!--dit is waar wij divs genereren bij het clicken op recepten-->
-    <b><a id="titelreceptdiv"><?=$row['naam']?></a></b>
+    <b><a id="titelreceptdiv"><?=htmlspecialchars($row['naam'], ENT_QUOTES, 'UTF-8');?></a></b>
     <?php
 
     for($x=0;$x<5;$x++){
@@ -17,12 +17,20 @@
         }
         echo "}</script>";
     }?>
+    <script>
+        function confirmationDelete(anchor)
+        {
+            var conf = confirm('Wil jij dit recept zeker verwijderen?');
+            if(conf)
+                window.location=anchor.attr("href");
+        }
+    </script>
     <?php if($admin) : ?>
         <a class="deleterecept" onclick='javascript:confirmationDelete($(this));return false;' href='verwijderrecept.php?id=<?=$xrec?>'>Verwijder recept</a>
 
     <?php endif; ?>
     <div class="bereiding">
-        <a><?=$row['bereiding']?></a>
+        <a><?=htmlspecialchars($row['bereiding'], ENT_QUOTES, 'UTF-8');?></a>
     </div>
 
 </div>

@@ -15,7 +15,7 @@
             ?>
 
 
-            <li><a id="welkom" style="cursor:pointer" value="play"><?php echo $gebruiker; ?></a></li>
+            <li><a id="welkom" style="cursor:pointer" value="play"><?php echo htmlspecialchars($gebruiker, ENT_QUOTES, 'UTF-8'); ?></a></li>
             <?php
         }
         else

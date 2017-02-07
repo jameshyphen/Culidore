@@ -1,7 +1,7 @@
 <table class="receptentabellen" style="cursor:pointer" id="tabrec<?= $xrec ?>">
 
                 <tr>
-                    <td colspan="2"><?= $row['naam'] ?></td>
+                    <td colspan="2"><?=  htmlspecialchars($row['naam'], ENT_QUOTES, 'UTF-8'); ?></td>
 </tr>
 <tr>
     <td colspan="2"><?= $newformat ?></td>
@@ -10,10 +10,10 @@
     <td colspan="2"><img id="fotosss" width="150px"   height="150px" src="<?= $row['foto'] ?>"</td>
 </tr>
 <tr>
-    <td colspan="2">Gepublished door: <?= $row['Username'] ?></td>
+    <td colspan="2">Gepublished door: <?=  htmlspecialchars($row['Username'], ENT_QUOTES, 'UTF-8'); ?></td>
 </tr>
 <tr>
-    <td colspan="2"><?= $row['omschrijving'] ?></td>
+    <td colspan="2"><?=  htmlspecialchars($row['omschrijving'], ENT_QUOTES, 'UTF-8'); ?></td>
 </tr>
 <tr>
     <td>

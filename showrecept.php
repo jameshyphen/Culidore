@@ -26,8 +26,7 @@ echo "<script>
 
 if ($xy == 1) {
 $xy++;
-echo "<div class='mainpagina' onclick='closelogintje();'>
-    <div class='venster' >
+echo "<div class='venster' >
     </div>";
     }
     $time = strtotime($row['Tijdgeplaatst']);
