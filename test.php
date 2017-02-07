@@ -12,11 +12,11 @@
 
 <script src="https://use.fontawesome.com/3008661bde.js"></script>
 
-<form>
-    <p><button id="upload_button"><i class="fa fa-cloud-upload"></i>Click here to select file</button></p>
-    <p><input  id="upload_input" name="Foto" type="file"/></p>
 
-</form>
+    <p><button id="upload_button"><i class="fa fa-cloud-upload"></i>Click here to select file</button></p>
+    <p><input  id="upload_input" name="Foto" type="file" accept="image/*" size=35></p>
+
+
 <script>
     var button = document.getElementById('upload_button');
     var input  = document.getElementById('upload_input');

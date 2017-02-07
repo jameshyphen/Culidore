@@ -395,14 +395,10 @@ body{
 }
 .divrating {
 
-	position:relative;
-	margin-left:180px;
+	position: relative;
+	margin-left: 180px;
 
 }
-.divprijs {
-	position:relative;
-}
-
 .divsoort {
 	position:relative;
 }
@@ -632,6 +628,7 @@ body{
 .divprijs{
 	position:relative;
 	top:40px;
+	width:50px;
 }
 .divbereiding{
 	position:relative;
