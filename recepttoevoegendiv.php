@@ -31,6 +31,20 @@
         <div class="divfoto">
             <?php include('test.php');?>
         </div>
+        <div class="divvaningredienten">
+            <a class="circle2">+</a>
+            <?php
+            include('ingredientinput.php');?>
+            <script>
+                $(document).ready(function(){
+                    $(".circle2").click(function(){
+                        $(".divvaningredienten").append("asdasd");
+                    });
+                });
+            </script>
+
+        </div>
+
         <input class="divinputknop" type="submit" name="Toevoegen" value="Toevoegen">
     </form>
 </div>

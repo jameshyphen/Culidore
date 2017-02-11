@@ -628,7 +628,7 @@ body{
 .divprijs{
 	position:relative;
 	top:40px;
-	width:50px;
+	width:50%;
 }
 .divbereiding{
 	position:relative;
@@ -684,4 +684,15 @@ body{
 .ingredients{
 	position:absolute;
 	left:50%;
+}
+.divvaningredienten{
+	position:absolute;
+	left:52%;
+	top:74%;
+	width:100px;
+
+}
+.selectingredient{
+	display:inline-block;
+	margin-bottom:7px;
 }

@@ -5,7 +5,7 @@ include('scriptremoveGET.php');
 <script>
 
     if(typeof window.history.pushState == 'function') {
-        window.history.pushState({}, "Hide", "Index");
+        window.history.pushState({}, "Hide", "index");
     }
 </script>
 
