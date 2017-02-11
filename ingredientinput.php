@@ -2,8 +2,10 @@
 include('db.php');
 if ($conn) {
     $vraag = "select id, Naam from Ingredienten";
-    if ($result = mysqli_query($conn, $vraag)) {?>
-        <select class="selectingredient" name="ingredient">
+    if ($result = mysqli_query($conn, $vraag)) {
+        echo "<select class=\"selectingredient\" name=\"ingredient\">"?>
+        
+
 
             <?php
             while ($row = mysqli_fetch_assoc($result)) {
@@ -14,6 +16,9 @@ if ($conn) {
             <?php       }?>
 
         </select>
+        <button onclick="removeIngredient(">
+            X
+        </button>
         <?php
     }
     else

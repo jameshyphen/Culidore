@@ -353,8 +353,7 @@ body{
 .recepttoevoegen {
 	border-radius: 7px;
 	position:fixed;
-	padding-left:2%;
-	padding-top:2%;
+	padding: 2% 2% 2% 2%;
 	left:25%;
 	top: 20%;
 	opacity:1;
@@ -388,11 +387,7 @@ body{
 
 
 
-.titelgerecht {
 
-	position:absolute;
-
-}
 .divrating {
 
 	position: relative;
@@ -612,46 +607,8 @@ body{
 .fixed{
 	color:dodgerblue;
 }
-.notfixed{
-	color:orangered;
-}
-.bereiding a{
-	text-decoration: none;
-	background-color: #7d7d7d;
-	color:white;
-}
-
-.textareaomschrijving {
-	position: absolute;
-
-}
-.divprijs{
-	position:relative;
-	top:40px;
-	width:50%;
-}
-.divbereiding{
-	position:relative;
-	top:40px;
-	width:50%;
-}
-.divomschrijving{
-	position:relative;
-	left:50%;
-	width:50%;
-}
-.fotoinputdiv{
-	 position:relative;
-	 top:40px;
- }
-.divinputknop{
-	position:relative;
-	top:25px;
-}
-.fotoinputdiv {
-	position: relative;
-	overflow: hidden;
-	margin: 10px;
+.notfixed {
+	color: orangered;
 }
 .fotoinputdiv input.upload {
 	position: absolute;
@@ -677,22 +634,33 @@ body{
 
 	padding: 5px;
 }
-.divfoto{
-	position:relative;
-	top:30px;
-}
-.ingredients{
-	position:absolute;
-	left:50%;
-}
-.divvaningredienten{
-	position:absolute;
-	left:52%;
-	top:74%;
-	width:100px;
 
+
+
+#idknopingredient{
+	display: inline-block;
+	background: #811412;
+	border-radius: 4px;
+	font-family: "arial-black";
+	font-size: 14px;
+	color: #FFF;
+	padding: 8px 12px;
+	cursor: pointer;
+	margin-bottom:10px;
 }
-.selectingredient{
+
+.boxlinks{
+	width:40%;
 	display:inline-block;
-	margin-bottom:7px;
+	height:300px;
+	position:absolute;
+}
+.boxrechts{
+	width:40%;
+	height:300px;
+	position:absolute;
+	left:49%;
+	top:4%;
+
+
 }
