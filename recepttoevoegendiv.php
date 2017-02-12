@@ -36,26 +36,7 @@
                 <textarea class="textareaomschrijving" name="textareaomschrijving"  required data-errormessage-value-missing="Vul dit veld in"></textarea>
             </div>
             <div id="ingdiv" class="divvaningredienten">
-                <a id="idknopingredient" onclick="doSomething();">Voeg ingredient</a>
-
-                <script type="text/javascript">
-                    var divid=0;
-
-                    function doSomething() {
-                        divid++;
-                        var div = document.createElement('div');
-                        div.id="result" + divid;
-                        document.getElementById("ingdiv").appendChild(div);
-                        var id = 1;
-                        $('#result').html('Downloading...');
-                        $.ajax({
-
-                            url: "ingredientinput.php?id="+divid
-                        }).done(function(data) { // data what is sent back by the php page
-                            $('#result' + divid).html(data);
-                        });
-                    }
-                </script>
+                <?php include('ingredientarray.php');?>
 
             </div>
         </div>

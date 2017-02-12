@@ -639,7 +639,7 @@ body{
 
 #idknopingredient{
 	display: inline-block;
-	background: #811412;
+	background: forestgreen;
 	border-radius: 4px;
 	font-family: "arial-black";
 	font-size: 14px;
@@ -663,4 +663,15 @@ body{
 	top:4%;
 
 
+}
+#VerwijderIngredient{
+	display: inline-block;
+	background: #811412;
+	border-radius: 4px;
+	font-family: "arial-black";
+	font-size: 14px;
+	color: #FFF;
+	padding: 8px 12px;
+	cursor: pointer;
+	margin-bottom:10px;
 }
