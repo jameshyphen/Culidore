@@ -1,7 +1,7 @@
 <div style="overflow-y: scroll;" class="receptdiv" id="rec<?= $xrec ?>"><!--dit is waar wij divs genereren bij het clicken op recepten-->
     <b><a id="titelreceptdiv"><?=htmlspecialchars($row['naam'], ENT_QUOTES, 'UTF-8');?></a></b>
     <?php
-
+    $idvanrecept = $row['id'];
     for($x=0;$x<5;$x++){
         echo '<div onclick="ster'.$x.$xrec.'();" id="'.$x.$xrec.'ster" class="ratezelf">
                     <img onclick="ster'.$x.'();" width="30px" height="30px"		
@@ -31,6 +31,24 @@
     <?php endif; ?>
     <div class="bereiding">
         <a><?=htmlspecialchars($row['bereiding'], ENT_QUOTES, 'UTF-8');?></a>
+    </div>
+    <div class="boxjenaarrechts">
+        <?php
+        $ingredientvraag = 'SELECT Naam
+                            FROM Ingredienten
+                            INNER JOIN `Recept-Ingredient`
+                            ON Ingredienten.id=`Recept-Ingredient`.idIngredient
+                            Where `Recept-Ingredient`.`idRecept`='.$idvanrecept.';';
+        if ($result2 = mysqli_query($conn, $ingredientvraag)) {
+
+            while ($row = mysqli_fetch_assoc($result2)) {
+                echo $row['Naam']."</br>";
+            }
+        }
+
+
+        ?>
+
     </div>
 
 </div>

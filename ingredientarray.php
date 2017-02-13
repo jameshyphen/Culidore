@@ -15,15 +15,21 @@ if ($conn) {
         echo "Geen resultaat";
     }
 }
-?><div id="demo"></div>
+?>
+<input name="aantaling" id="idinput" type="hidden" />
+<div id="demo"></div>
+
 <div id="deldem"></div>
 <a id="idknopingredient" onclick="createSelect();">Voeg ingredient</a>
 <script>
     var ingredienten = [<?php echo '"'.implode('","',  $ingredienten ).'"' ?>];
     var id=0;
+    var jsidinput = document.getElementById("idinput");
     function createSelect(){
         if(id<10){
             id++;
+
+            jsidinput.value=id;
             var myDiv = document.createElement("div");
             myDiv.id = "selectdiv"+id;
             document.getElementById("demo").appendChild(myDiv);
@@ -50,6 +56,7 @@ if ($conn) {
             if(id>1) {
                 $("#selectdiv" + id).remove();
                 id--;
+                jsidinput.value=id;
             }
             else{
                 alert("Jij moet minstens 1 ingredient hebben!");
