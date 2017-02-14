@@ -7,6 +7,7 @@
         if(isset($_SESSION['gebruiker'])){
             echo " <a class=\"circle\" href=\"#\">+</a>";
         }?>
+        <a class="zoeken" href="#">  <i class="fa fa-search fa-2x" aria-hidden="true"></i> Zoeken</a>
         <?php
 
         if (isset($_SESSION['gebruiker']))

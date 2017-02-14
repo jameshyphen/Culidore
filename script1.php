@@ -7,6 +7,7 @@
             $(".recepttoevoegen").slideUp("fast");
             $(".gelogged").fadeOut("fast");
             $(".receptdiv").slideUp("fast");
+            $(".zoekendiv").slideUp("fast");
         });
     });
     function closelogintje(){
@@ -19,6 +20,7 @@
             $(".venster").fadeIn(300);
             $(".recepttoevoegen").slideUp("fast");
             $(".gelogged").fadeOut("fast");
+            $(".zoekendiv").slideUp("fast");
             $(".receptdiv").slideUp("fast");
         });
     });
@@ -30,7 +32,7 @@
             $(".recepttoevoegen").slideUp("fast");
             $(".gelogged").slideUp("fast");
             $(".probleemtoevoegen").slideUp("fast");
-
+            $(".zoekendiv").slideUp("fast");
         });
     });
     $(document).keyup(function(e) {
@@ -42,12 +44,13 @@
             $(".gelogged").slideUp("fast");
             $(".probleemtoevoegen").slideUp("fast");
             $(".receptdiv").slideUp("fast");
+            $(".zoekendiv").slideUp("fast");
         }});
     $(document).ready(function(){
         $(".mainpagina").click(function(){
             $(".logintje").slideUp("fast");
             $(".registratie").slideUp("fast");
-
+            $(".zoekendiv").slideUp("fast");
             $(".recepttoevoegen").slideUp("fast");
             $(".gelogged").fadeOut("fast");
         });
@@ -61,6 +64,7 @@
             $(".gelogged").fadeOut("fast");
             $(".receptdiv").slideUp("fast");
             $(".probleemtoevoegen").slideUp("fast");
+            $(".zoekendiv").slideUp("fast");
         });
     });
     $(document).ready(function(){
@@ -71,6 +75,7 @@
             $(".recepttoevoegen").slideUp("fast");
             $(".gelogged").fadeToggle("fast");
             $(".receptdiv").slideUp("fast");
+            $(".zoekendiv").slideUp("fast");
             $(".probleemtoevoegen").slideUp("fast");
         });
     });
@@ -83,6 +88,18 @@
             $(".gelogged").fadeOut("fast");
             $(".receptdiv").slideUp("fast");
             $(".probleemtoevoegen").fadeToggle("fast");
+            $(".zoekendiv").slideUp("fast");
+        });
+    });
+    $(document).ready(function(){
+        $(".zoeken").click(function(){
+            $(".logintje").slideUp("fast");
+            $(".registratie").slideUp("fast");
+            $(".venster").fadeIn("fast");
+            $(".recepttoevoegen").slideUp("fast");
+            $(".gelogged").fadeOut("fast");
+            $(".receptdiv").slideUp("fast");
+            $(".zoekendiv").fadeToggle("fast");
         });
     });
 </script>

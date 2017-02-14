@@ -26,7 +26,7 @@ if ($conn) {
     var id=0;
     var jsidinput = document.getElementById("idinput");
     function createSelect(){
-        if(id<10){
+
             id++;
 
             jsidinput.value=id;
@@ -46,10 +46,7 @@ if ($conn) {
                 option.text = ingredienten[i];
                 selectList.appendChild(option);
             }
-        }
-        else{
-            alert("Jij hebt te veel ingredienten.")
-        }
+
     }
     $(document).ready(function(){
         $("#VerwijderIngredient").click(function(){

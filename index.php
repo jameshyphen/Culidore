@@ -36,6 +36,7 @@ include('script1.php');
 ?>
 <?php
 include('registerdiv.php');
+include('zoekendiv.php');
 include('recepttoevoegendiv.php');
 include('probleemtoevoegen.php');
 ?>

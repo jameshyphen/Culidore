@@ -22,9 +22,15 @@
                 }
 
             }
-            if(isset($_GET['pr'])){
-                if($_GET['pr']=='s'){
-                    echo "Probleem is aangemeld";
+            if(isset($_GET['prob'])){
+                if($_GET['prob']=='f'){
+                    echo "Probleem is gefikst";
+                }
+
+            }
+            if(isset($_GET['prob'])){
+                if($_GET['prob']=='nf'){
+                    echo "Probleem is niet gefikst";
                 }
 
             }
