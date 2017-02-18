@@ -58,7 +58,7 @@
     </div>
     <div class='gelogged'>
         <div class='accountinstellingen'><ul>
-                <li><a style='cursor:pointer' class='instellingen'>Instellingen</a></li>
+                <li><a style='cursor:pointer' class='instellingen' href="instellingenwijzigen.php">Instellingen</a></li>
                 <li><a style='cursor:pointer' class='aanmeldprobleem'>Probleem Aanmelden</a></li>
 
                 <?php
