@@ -26,14 +26,15 @@ if (isset($_SESSION['gebruiker']))
     $filetype = $_FILES['Foto']['type'];
     
 
-    if ($_FILES['foto']['name']==0) 
+    if (empty($filename))
     {
         $filepath = "images/geenfoto.png";
     }
     else
     {
-        $filepath = "images/".$filename;
-    }    
+    	$filepath = "images/".$filename;
+    }
+       
 
 
     move_uploaded_file($filetmp, $filepath);
