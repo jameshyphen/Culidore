@@ -7,7 +7,7 @@ $gebruiker = $_POST['gebruiker'];
 $email = $_POST['email'];
 $passwoord = $_POST['pass'];
 $passwoordopnieuw = $_POST['opnieuw'];
-$encryptpass = crypt($passwoord);
+$encryptpass = md5($passwoord);
 $location = "index.php?";
 
 // checken of email al bestaat

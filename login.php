@@ -11,7 +11,7 @@ $gebruiker = stripslashes($gebruiker);
 $passwoord = stripslashes($passwoord);
 $gebruiker = mysqli_real_escape_string($conn, $gebruiker);
 $passwoord = mysqli_real_escape_string($conn, $passwoord);
-$encryptpass = crypt($passwoord);
+$encryptpass = md5($passwoord);
 $sql="SELECT * FROM Gebruikers WHERE gebruiker='$gebruiker' and passwoord='$encryptpass'";
 $result=mysqli_query($conn, $sql);
 

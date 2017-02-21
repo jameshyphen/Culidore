@@ -22,22 +22,23 @@ if (isset($_SESSION['gebruiker']))
     $ingredienten=array_unique($ingredienten);
     //fotopath in database
     $filetmp = $_FILES['Foto']['tmp_name'];
-    $filename = $_FILES['Foto']['name'];
+    $fname = $_FILES['Foto']['name'];
     $filetype = $_FILES['Foto']['type'];
-    
+    $random_number = mt_rand(1000000,99999999);
+    $ext = pathinfo($fname, PATHINFO_EXTENSION);
+    $random = uniqid($random_number);
+    $filename = $random.".".$ext;
 
-    if (empty($filename))
+    if (empty($fname))
     {
-        $filepath = "images/geenfoto.png";
+        $filepath = "Default image/geenfoto.png";
     }
     else
     {
     	$filepath = "images/".$filename;
     }
-       
-
-
-    move_uploaded_file($filetmp, $filepath);
+   
+	move_uploaded_file($filetmp, $filepath);
 
     // maak recept aan
     $sql = "INSERT INTO tblrecepten(id, naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst) VALUES('', '$titel', '$rating', '$prijs', '$soort', '$omschrijving', '$filepath', '$bereiding', '$gebruiker', '$datum')";
