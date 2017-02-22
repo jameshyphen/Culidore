@@ -13,7 +13,7 @@
             <div class="divbereiding">
                 <a class="bereiding">Omschrijving</a></br>
 
-                <textarea  name="Bereiding"  required data-errormessage-value-missing="Vul dit veld in"></textarea>
+                <textarea  name="Omschrijving"  required data-errormessage-value-missing="Vul dit veld in"></textarea>
             </div>
             <div class="divprijs">
                 <a class="soort">Soort</a></br>
@@ -33,7 +33,7 @@
         <div class="boxrechts">
             <div class="divomschrijving">
                 <a class="rating">Bereiding</a></br>
-                <textarea class="textareaomschrijving" name="textareaomschrijving"  required data-errormessage-value-missing="Vul dit veld in"></textarea>
+                <textarea class="textareaomschrijving" name="Bereiding"  required data-errormessage-value-missing="Vul dit veld in"></textarea>
             </div>
             <div id="ingdiv" class="divvaningredienten">
                 <?php include('ingredientarray.php');?>
