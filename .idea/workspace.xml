@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3aeefded-d9c9-4d08-8866-71ba02f21759" name="Default" comment="Rating toevoegen, probleem aanmelding">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showrecept.php" afterPath="$PROJECT_DIR$/showrecept.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,19 +75,26 @@
         <entry file="file://$PROJECT_DIR$/showrecept.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+              <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
               <folding>
-                <marker date="1487800218827" expanded="true" signature="69:84" ph="select id, N... Ingredienten" />
-                <marker date="1487800218827" expanded="true" signature="69:113" ph="select count... Ingredienten" />
-                <marker date="1487800218827" expanded="true" signature="683:756" ph="SELECT `id`,... Recept-Ingredient" />
-                <marker date="1487800218827" expanded="true" signature="683:757" ph="SELECT `id`,... Recept-Ingredient" />
-                <marker date="1487800218827" expanded="true" signature="1157:1275" ph="select id, n... tblrecepten" />
-                <marker date="1487800218827" expanded="true" signature="1524:1634" ph="select id, n... tblrecepten" />
-                <marker date="1487800218827" expanded="true" signature="1828:2332" ph="..." />
-                <marker date="1487800218827" expanded="true" signature="1862:2321" ph="{...}" />
-                <marker date="1487800218827" expanded="true" signature="1914:2208" ph="{...}" />
-                <marker date="1487800218827" expanded="true" signature="2250:2313" ph="{...}" />
-                <marker date="1487800218827" expanded="true" signature="2430:2442" ph="..." />
+                <marker date="1487802380929" expanded="true" signature="69:84" ph="select id, N... Ingredienten" />
+                <marker date="1487802380929" expanded="true" signature="69:113" ph="select count... Ingredienten" />
+                <marker date="1487802380929" expanded="true" signature="810:861" ph="SELECT disti... Recept-Ingredient" />
+                <marker date="1487802380929" expanded="true" signature="810:1143" ph="SELECT disti... Recept-Ingredient" />
+                <marker date="1487802380929" expanded="true" signature="1078:1143" ph="SELECT disti... Recept-Ingredient" />
+                <marker date="1487802380929" expanded="true" signature="1147:1220" ph="SELECT disti... Recept-Ingredient" />
+                <marker date="1487802380929" expanded="true" signature="1537:1647" ph="select id, n... tblrecepten" />
+                <marker date="1487802380929" expanded="true" signature="1537:1736" ph="select id, n... tblrecepten" />
+                <marker date="1487802380929" expanded="true" signature="1894:2012" ph="select id, n... tblrecepten" />
+                <marker date="1487802380929" expanded="true" signature="2355:2484" ph="select id, n... tblrecepten" />
+                <marker date="1487802380929" expanded="true" signature="2355:2504" ph="select id, n... tblrecepten" />
+                <marker date="1487802380929" expanded="true" signature="2560:2670" ph="select id, n... tblrecepten" />
+                <marker date="1487802380929" expanded="true" signature="2864:3368" ph="..." />
+                <marker date="1487802380929" expanded="true" signature="2898:2910" ph="{...}" />
+                <marker date="1487802380929" expanded="true" signature="2898:3357" ph="{...}" />
+                <marker date="1487802380929" expanded="true" signature="2950:3244" ph="{...}" />
+                <marker date="1487802380929" expanded="true" signature="3286:3349" ph="{...}" />
+                <marker date="1487802380929" expanded="true" signature="3466:3478" ph="..." />
               </folding>
             </state>
           </provider>
@@ -95,8 +103,8 @@
       <file leaf-file-name="zoekendiv.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zoekendiv.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+            <state relative-caret-position="236">
+              <caret line="44" column="49" lean-forward="true" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
               <folding>
                 <marker date="1487796768217" expanded="true" signature="276:309" ph="select id, N... Ingredienten" />
                 <marker date="1487796768217" expanded="true" signature="1685:1738" ph="select disti... tblingredieten" />
@@ -161,7 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;</find>
       <find>mainpagina</find>
       <find>session</find>
       <find>register</find>
@@ -191,6 +198,7 @@
       <find>receptendiv</find>
       <find>receptdiv</find>
       <find>tablebug</find>
+      <find>vraag</find>
     </findStrings>
     <replaceStrings>
       <replace>divomschrijving</replace>
@@ -435,7 +443,7 @@
       <workItem from="1487111793424" duration="1812000" />
       <workItem from="1487703936310" duration="108000" />
       <workItem from="1487784818586" duration="8000" />
-      <workItem from="1487785178723" duration="9123000" />
+      <workItem from="1487785178723" duration="11293000" />
     </task>
     <task id="LOCAL-00001" summary="test data gewist">
       <created>1485945646492</created>
@@ -469,7 +477,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123021000" />
+    <option name="totallyTimeSpent" value="125191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -488,6 +496,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287827" sideWeight="0.5013889" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.060028248" sideWeight="0.49861112" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49861112" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -501,7 +510,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -885,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zoekendiv.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        <state relative-caret-position="236">
+          <caret line="44" column="49" lean-forward="true" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
           <folding>
             <marker date="1487796768217" expanded="true" signature="276:309" ph="select id, N... Ingredienten" />
             <marker date="1487796768217" expanded="true" signature="1685:1738" ph="select disti... tblingredieten" />
@@ -901,19 +909,26 @@
     <entry file="file://$PROJECT_DIR$/showrecept.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
           <folding>
-            <marker date="1487800218827" expanded="true" signature="69:84" ph="select id, N... Ingredienten" />
-            <marker date="1487800218827" expanded="true" signature="69:113" ph="select count... Ingredienten" />
-            <marker date="1487800218827" expanded="true" signature="683:756" ph="SELECT `id`,... Recept-Ingredient" />
-            <marker date="1487800218827" expanded="true" signature="683:757" ph="SELECT `id`,... Recept-Ingredient" />
-            <marker date="1487800218827" expanded="true" signature="1157:1275" ph="select id, n... tblrecepten" />
-            <marker date="1487800218827" expanded="true" signature="1524:1634" ph="select id, n... tblrecepten" />
-            <marker date="1487800218827" expanded="true" signature="1828:2332" ph="..." />
-            <marker date="1487800218827" expanded="true" signature="1862:2321" ph="{...}" />
-            <marker date="1487800218827" expanded="true" signature="1914:2208" ph="{...}" />
-            <marker date="1487800218827" expanded="true" signature="2250:2313" ph="{...}" />
-            <marker date="1487800218827" expanded="true" signature="2430:2442" ph="..." />
+            <marker date="1487802380929" expanded="true" signature="69:84" ph="select id, N... Ingredienten" />
+            <marker date="1487802380929" expanded="true" signature="69:113" ph="select count... Ingredienten" />
+            <marker date="1487802380929" expanded="true" signature="810:861" ph="SELECT disti... Recept-Ingredient" />
+            <marker date="1487802380929" expanded="true" signature="810:1143" ph="SELECT disti... Recept-Ingredient" />
+            <marker date="1487802380929" expanded="true" signature="1078:1143" ph="SELECT disti... Recept-Ingredient" />
+            <marker date="1487802380929" expanded="true" signature="1147:1220" ph="SELECT disti... Recept-Ingredient" />
+            <marker date="1487802380929" expanded="true" signature="1537:1647" ph="select id, n... tblrecepten" />
+            <marker date="1487802380929" expanded="true" signature="1537:1736" ph="select id, n... tblrecepten" />
+            <marker date="1487802380929" expanded="true" signature="1894:2012" ph="select id, n... tblrecepten" />
+            <marker date="1487802380929" expanded="true" signature="2355:2484" ph="select id, n... tblrecepten" />
+            <marker date="1487802380929" expanded="true" signature="2355:2504" ph="select id, n... tblrecepten" />
+            <marker date="1487802380929" expanded="true" signature="2560:2670" ph="select id, n... tblrecepten" />
+            <marker date="1487802380929" expanded="true" signature="2864:3368" ph="..." />
+            <marker date="1487802380929" expanded="true" signature="2898:2910" ph="{...}" />
+            <marker date="1487802380929" expanded="true" signature="2898:3357" ph="{...}" />
+            <marker date="1487802380929" expanded="true" signature="2950:3244" ph="{...}" />
+            <marker date="1487802380929" expanded="true" signature="3286:3349" ph="{...}" />
+            <marker date="1487802380929" expanded="true" signature="3466:3478" ph="..." />
           </folding>
         </state>
       </provider>
