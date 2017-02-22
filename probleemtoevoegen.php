@@ -6,6 +6,6 @@
             <textarea rows="4" cols="50" name="probleembeschrijf" form="probleemform"></textarea>
         </div>
 
-        <input type="submit" name="Toevoegen" value="Toevoegen">
+        <input class="zoekenreceptinput" type="submit" name="Toevoegen" value="Toevoegen">
     </form>
 </div>

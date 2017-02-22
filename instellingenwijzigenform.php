@@ -11,7 +11,7 @@
 
 		if ($result = mysqli_query($conn,$vraag)) 
 		{
-			echo '<table border="0" cellpadding="10" cellspacing="0" width="500" align="left" class="tblSaveForm" bgcolor="white">';
+			echo '<table class="tablebugfixes2">';
 			echo '<td colspan="2"><b>Account informatie</td>';
 			while ($row = mysqli_fetch_assoc($result))
 			{
@@ -47,8 +47,8 @@
 ?>
 
 <form method="post" action="">
-	<div style="width:500px;">
-	<table border="0" cellpadding="10" cellspacing="0" width="500" align="left" class="tblSaveForm" bgcolor="white">
+
+	<table class="tablebugfixes">
 	<tr class="tableheader">
 	<td colspan="2"><b>Passwoord wijzigen</td>
 	</tr>
@@ -64,10 +64,10 @@
 	<td><input type="password" name="confirmPassword" class="txtField"/><span id="confirmPassword" class="required"></span></td>
 	</tr>
 	<tr>
-	<td colspan="2"><input type="submit" name="wijzigen" value="Wijzigen" class="btnSubmit"></td>
+	<td colspan="2"><input class="zoekenreceptinput" type="submit" name="wijzigen" value="Wijzigen" class="btnSubmit"></td>
 	</tr>
 	</table>
-	</div>
+
 </form>
 
 

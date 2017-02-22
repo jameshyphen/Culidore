@@ -511,8 +511,8 @@ body{
 .receptdiv {
 	border-radius: 7px;
 	position:fixed;
-	padding-left:5%;
-	padding-top:3%;
+	padding-left:3%;
+	padding-top:2%;
 	left:25%;
 	top: 20%;
 	opacity:1;
@@ -551,8 +551,8 @@ body{
 .probleemtoevoegen {
 	border-radius: 7px;
 	position:fixed;
-	padding-left:5%;
-	padding-top:3%;
+	padding-left:3%;
+	padding-top:2%;
 	left:25%;
 	top: 20%;
 	opacity:1;
@@ -562,6 +562,7 @@ body{
 	animation-name: registratieformpje;
 	animation-duration: .7s;
 	display:none;
+
 }
 .ratezelf {
 	display:inline-block;
@@ -571,6 +572,24 @@ body{
 	opacity:0.6;
 }
 .tablebugfixes{
+	border: 1px solid black;
+	Background-color:white;
+	margin-bottom:15%;
+
+
+
+	top:50px;
+	border-width: 2px;
+	border-color: #811412;
+	border-radius: 7px;
+	width:90%;
+	left:5%;
+	position:relative;
+
+	border: 1px solid #811412;
+	border-collapse: collapse;
+}
+.tablebugfixes2{
 	border: 1px solid black;
 	Background-color:white;
 
@@ -585,16 +604,26 @@ body{
 	left:5%;
 	position:relative;
 
-}
-.tablebugfixes{
 	border: 1px solid #811412;
 	border-collapse: collapse;
 }
 .tablebugfixes td{
 	border: 1px solid #811412;
 	border-collapse: collapse;
+	padding:1%;
 }
 .tablebugfixes tr{
+	border: 1px solid #811412;
+	border-collapse: collapse;
+
+}
+.tablebugfixes2 td{
+	border: 1px solid #811412;
+	border-collapse: collapse;
+	padding:1%;
+
+}
+.tablebugfixes2 tr{
 	border: 1px solid #811412;
 	border-collapse: collapse;
 }

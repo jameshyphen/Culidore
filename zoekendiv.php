@@ -37,8 +37,23 @@
 
                 }
             }
+
             ?>
         </table>
+
+        <div class="soortendivzoeken">
+            <b>Soort:   </b><select name="Soort">
+                <option>Alles</option>
+            <?php
+            $vraag = "select distinct soort from tblrecepten order by soort";
+            if ($result = mysqli_query($conn, $vraag)) {
+                while ($row = mysqli_fetch_assoc($result)) {?>
+                    <option><?=$row['soort']?></option>
+               <?php }
+            }
+            ?>
+            </select>
+        </div>
         <script>
 
             $(document).ready(function() {

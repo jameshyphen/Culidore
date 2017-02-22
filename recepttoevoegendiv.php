@@ -26,6 +26,7 @@
                     <option>Soep</option>
                     <option>Drank</option>
                     <option>Broodje</option>
+                    <option>Dessert</option>
                 </select>
             </div>
             <div class="divfoto">
