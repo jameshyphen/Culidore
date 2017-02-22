@@ -431,6 +431,7 @@ body{
 .receptentabellen{
 	border: 1px solid black;
 	Background-color:white;
+	padding:7px;
 	border-radius: 15px;
 	border-collapse: collapse;
 	display:inline-block;
@@ -730,4 +731,26 @@ input[type=text] {
 
 input[type=text]:focus {
 	width: 90%;
+}
+
+.ingredienten{
+	position:absolute;
+	right:7%;
+	top:7%;
+}
+.deleterecept{
+	margin-top:1%;
+	display: inline-block;
+	background: #811412;
+	border-radius: 4px;
+	text-decoration:none;
+	font-size: 14px;
+	color: #FFF;
+	padding: 8px 12px;
+	cursor: pointer;
+	margin-bottom:10px;
+}
+.divrecepttitel{
+	position:relative;
+	width: 65%;
 }
