@@ -52,10 +52,10 @@
 
 
         </script>
-
+        <input class="zoekenreceptinput" type="submit" value="Zoeken">
     </form>
 
 
-    <button id="sel">Select alles</button>
-    <button id="desel">Deselect alles</button>
+    <button class="zoekenreceptinput" id="sel">Select alles</button>
+    <button class="zoekenreceptinput" id="desel">Deselect alles</button>
 </div>

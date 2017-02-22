@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3aeefded-d9c9-4d08-8866-71ba02f21759" name="Default" comment="Rating toevoegen, probleem aanmelding">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design.css" afterPath="$PROJECT_DIR$/design.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/receptdiv.php" afterPath="$PROJECT_DIR$/receptdiv.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zoekendiv.php" afterPath="$PROJECT_DIR$/zoekendiv.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -114,23 +114,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zoekendiv.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="zoekendiv.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zoekendiv.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="569">
+              <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
               <folding>
-                <marker date="1487106911998" expanded="true" signature="276:309" ph="select id, N... Ingredienten" />
+                <marker date="1487794727404" expanded="true" signature="276:309" ph="select id, N... Ingredienten" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="design.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="design.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/design.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="716" column="18" lean-forward="true" selection-start-line="716" selection-start-column="18" selection-end-line="716" selection-end-column="18" />
+            <state relative-caret-position="632">
+              <caret line="756" column="18" lean-forward="false" selection-start-line="756" selection-start-column="1" selection-end-line="756" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -225,12 +225,12 @@
         <option value="$PROJECT_DIR$/script1.php" />
         <option value="$PROJECT_DIR$/ingredientarray.php" />
         <option value="$PROJECT_DIR$/tabelrecept.php" />
-        <option value="$PROJECT_DIR$/zoekendiv.php" />
         <option value="$PROJECT_DIR$/showrecept.php" />
         <option value="$PROJECT_DIR$/sources.php" />
         <option value="$PROJECT_DIR$/recepttoevoegendiv.php" />
         <option value="$PROJECT_DIR$/receptdiv.php" />
         <option value="$PROJECT_DIR$/design.css" />
+        <option value="$PROJECT_DIR$/zoekendiv.php" />
       </list>
     </option>
   </component>
@@ -425,7 +425,7 @@
       <workItem from="1487111793424" duration="1812000" />
       <workItem from="1487703936310" duration="108000" />
       <workItem from="1487784818586" duration="8000" />
-      <workItem from="1487785178723" duration="2931000" />
+      <workItem from="1487785178723" duration="3706000" />
     </task>
     <task id="LOCAL-00001" summary="test data gewist">
       <created>1485945646492</created>
@@ -459,7 +459,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116829000" />
+    <option name="totallyTimeSpent" value="117604000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -797,16 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zoekendiv.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-          <folding>
-            <marker date="1487106911998" expanded="true" signature="276:309" ph="select id, N... Ingredienten" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recept.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -892,9 +882,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/design.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="716" column="18" lean-forward="true" selection-start-line="716" selection-start-column="18" selection-end-line="716" selection-end-column="18" />
+        <state relative-caret-position="632">
+          <caret line="756" column="18" lean-forward="false" selection-start-line="756" selection-start-column="1" selection-end-line="756" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zoekendiv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+          <folding>
+            <marker date="1487794727404" expanded="true" signature="276:309" ph="select id, N... Ingredienten" />
+          </folding>
         </state>
       </provider>
     </entry>
