@@ -36,6 +36,8 @@
         <a><?=htmlspecialchars($row['bereiding'], ENT_QUOTES, 'UTF-8');?></a>
     </div>
     <div class="ingredienten">
+        <b>Soort:</b></br>
+        <?=$row['soort'];?></br></br>
         <b>Ingredienten:</b></br>
         <?php
         $ingredientvraag = 'SELECT Naam

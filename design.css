@@ -389,16 +389,15 @@ body{
 }
 .recepttoevoegen a {
 	color:black;
+	margin-top:2%;
 }
 .recepttoevoegen input{
 	width:160px;
 	border-style: solid;
 	border-width: 2px;
 	border-color: rgba(0,0,0,0.4);
-	height:25px;
+
 	border-radius:2px;
-
-
 
 }
 .recepttoevoegen input:focus{
@@ -765,4 +764,10 @@ input[type=text]:focus {
 	padding: 8px 12px;
 	cursor: pointer;
 	margin-bottom:10px;
+}
+.bereiding{
+	position:relative;
+
+	width:75%;
+
 }

@@ -18,15 +18,20 @@
             <div class="divprijs">
                 <a class="soort">Soort</a></br>
                 <select required data-errormessage-value-missing="Vul dit veld in" name="Soort">
-                    <option>Ontbijt</option>
-                    <option>Middageten</option>
-                    <option>Avondeten</option>
+                    <option>Vegetarisch</option>
+                    <option>Gezond</option>
+                    <option>Fast Food</option>
+                    <option>Salade</option>
+                    <option>Hoofdgerecht</option>
+                    <option>Soep</option>
+                    <option>Drank</option>
+                    <option>Broodje</option>
                 </select>
             </div>
             <div class="divfoto">
                 <?php include('test.php');?>
             </div>
-            <input class="divinputknop" type="submit" name="Toevoegen" value="Toevoegen">
+            <input class="zoekenreceptinput" type="submit" name="Toevoegen" value="Toevoegen">
         </div>
 
 
