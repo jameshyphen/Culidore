@@ -15,6 +15,12 @@
                 }
 
             }
+            if(isset($_GET['e'])){
+                if($_GET['e']=='s'){
+                    echo "Jouw account is aangemaakt!";
+                }
+
+            }
 
             if(isset($_GET['lgo'])){
                 if($_GET['lgo']=='s'){
@@ -22,6 +28,7 @@
                 }
 
             }
+
             if(isset($_GET['prob'])){
                 if($_GET['prob']=='f'){
                     echo "Probleem is gefikst";

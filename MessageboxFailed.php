@@ -14,4 +14,10 @@ if(isset($_GET['prob'])){
     if($_GET['prob']=='nf'){
         echo "Probleem met probleem fixen";
     }}
+if(isset($_GET['e'])){
+    if($_GET['e']=='pp'){
+        echo "Accountmaken tijdelijk uitgeschakeld!";
+    }
+
+}
 ?>
