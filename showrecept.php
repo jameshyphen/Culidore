@@ -11,7 +11,7 @@ if(isset($_GET['zoek'])){
         }
         $zoek="";
         if($_GET['zoek']!=""){
-            $zoek =  " AND naam LIKE '%".$_GET['zoek']."%'";
+            echo " AND naam LIKE '%".$_GET['zoek']."%'";
         }
         $NBI = array();
         $NBR = array();
@@ -31,24 +31,11 @@ if(isset($_GET['zoek'])){
             }
         }
     }
-    $soort = $_GET['Soort'];
-    if($soort=="Alles"){
-        $soortzoek="";
-        $andsoortzoek="";
-    }
-    else{
-        $andsoortzoek = " AND soort = '".$soort."'";
-        $soortzoek = " where soort = '".$soort."'";
-    }
+    
     if(count($NBR)==0){
-        $vraag = 'select id, naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst from tblrecepten';
-        if($_GET['zoek']==""){$vraag.=$soortzoek;}else{
-            $vraag.=" where naam like '%".$_GET['zoek']."%'".$andsoortzoek;
-        }
-
+        echo "<h1>Geen recepten gevonden</h1>";
+        $conn=false;
     }
-
-
     else{
         $numItems = count($NBR);
         $i = 0;
@@ -56,7 +43,7 @@ if(isset($_GET['zoek'])){
         foreach($NBR as $recpt){
 
             if(++$i === $numItems) {
-                $vraag.=" id=$recpt)".$zoek.$andsoortzoek;
+                $vraag.=" id=$recpt)".$zoek;
             }
             else{
                 $vraag.=" id=$recpt OR";
@@ -65,12 +52,13 @@ if(isset($_GET['zoek'])){
         }
     }
 
+
 }
 
-else
-    {
+else {
     $vraag = 'select id, naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst from tblrecepten';
 }
+
 if ($conn)
 {
 
