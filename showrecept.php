@@ -9,7 +9,10 @@ if(isset($_GET['zoek'])){
 
             }
         }
-        $zoek="";
+        if(isset($_GET['zoek'])){
+            $zoek=" AND Naam LIKE '%".$_GET['zoek']."%'";
+        }
+
         $NBI = array();
         $NBR = array();
         for($x=1;$x<=$aantalingredienten;$x++){
@@ -52,12 +55,13 @@ if(isset($_GET['zoek'])){
     }
     else {
         if (count($NBR) == 0) {
-
+            echo "NBR == 0";
             $conn = false;
         }
         else
         {
             if(count($NBI)>0) {
+                echo "NBI >0";
                 $numItems = count($NBR);
                 $i = 0;
                 $vraag = 'select id, naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst from tblrecepten WHERE (';
@@ -70,10 +74,12 @@ if(isset($_GET['zoek'])){
                 }
             }
             else{
-                $vraag = 'select id, naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst from tblrecepten WHERE Naam LIKE  "%'.$_GET['zoek'].'%"';
+                $vraag = 'select id, naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst from tblrecepten WHERE Naam LIKE  "%'.$_GET['zoek'].'%"'.$andsoortzoek;
             }
         }
     }
+    echo count($NBI);
+    echo $vraag;
 }
 else {
     $vraag = 'select id, naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst from tblrecepten';
