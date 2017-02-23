@@ -78,8 +78,7 @@ if(isset($_GET['zoek'])){
             }
         }
     }
-    echo count($NBI);
-    echo $vraag;
+    
 }
 else {
     $vraag = 'select id, naam, rating, prijs, soort, omschrijving, foto, bereiding, Username, Tijdgeplaatst from tblrecepten';

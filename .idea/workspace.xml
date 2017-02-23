@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3aeefded-d9c9-4d08-8866-71ba02f21759" name="Default" comment="Rating toevoegen, probleem aanmelding">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ifadmin.php" afterPath="$PROJECT_DIR$/ifadmin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showrecept.php" afterPath="$PROJECT_DIR$/showrecept.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,22 +53,22 @@
       <file leaf-file-name="showrecept.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/showrecept.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="67" column="42" lean-forward="true" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+            <state relative-caret-position="748">
+              <caret line="80" column="4" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
               <folding>
-                <marker date="1487872669741" expanded="true" signature="69:84" ph="select id, N... Ingredienten" />
-                <marker date="1487872669741" expanded="true" signature="69:113" ph="select count... Ingredienten" />
-                <marker date="1487872669741" expanded="true" signature="895:946" ph="SELECT disti... Recept-Ingredient" />
-                <marker date="1487872669741" expanded="true" signature="1232:1305" ph="SELECT disti... Recept-Ingredient" />
-                <marker date="1487872669741" expanded="true" signature="1622:1732" ph="select id, n... tblrecepten" />
-                <marker date="1487872669741" expanded="true" signature="2038:2156" ph="select id, n... tblrecepten" />
-                <marker date="1487872669741" expanded="true" signature="2499:2648" ph="select id, n... tblrecepten" />
-                <marker date="1487872669741" expanded="true" signature="2757:2867" ph="select id, n... tblrecepten" />
-                <marker date="1487872669741" expanded="true" signature="3061:3565" ph="..." />
-                <marker date="1487872669741" expanded="true" signature="3095:3554" ph="{...}" />
-                <marker date="1487872669741" expanded="true" signature="3147:3441" ph="{...}" />
-                <marker date="1487872669741" expanded="true" signature="3483:3546" ph="{...}" />
-                <marker date="1487872669741" expanded="true" signature="3663:3675" ph="..." />
+                <marker date="1487873633830" expanded="true" signature="69:84" ph="select id, N... Ingredienten" />
+                <marker date="1487873633830" expanded="true" signature="69:113" ph="select count... Ingredienten" />
+                <marker date="1487873633830" expanded="true" signature="895:946" ph="SELECT disti... Recept-Ingredient" />
+                <marker date="1487873633830" expanded="true" signature="1232:1305" ph="SELECT disti... Recept-Ingredient" />
+                <marker date="1487873633830" expanded="true" signature="1622:1732" ph="select id, n... tblrecepten" />
+                <marker date="1487873633830" expanded="true" signature="2038:2156" ph="select id, n... tblrecepten" />
+                <marker date="1487873633830" expanded="true" signature="2499:2648" ph="select id, n... tblrecepten" />
+                <marker date="1487873633830" expanded="true" signature="2723:2833" ph="select id, n... tblrecepten" />
+                <marker date="1487873633830" expanded="true" signature="3027:3531" ph="..." />
+                <marker date="1487873633830" expanded="true" signature="3061:3520" ph="{...}" />
+                <marker date="1487873633830" expanded="true" signature="3113:3407" ph="{...}" />
+                <marker date="1487873633830" expanded="true" signature="3449:3512" ph="{...}" />
+                <marker date="1487873633830" expanded="true" signature="3629:3641" ph="..." />
               </folding>
             </state>
           </provider>
@@ -434,7 +432,7 @@
       <workItem from="1487784818586" duration="8000" />
       <workItem from="1487785178723" duration="12099000" />
       <workItem from="1487803496015" duration="1617000" />
-      <workItem from="1487871653494" duration="1026000" />
+      <workItem from="1487871653494" duration="1627000" />
     </task>
     <task id="LOCAL-00001" summary="test data gewist">
       <created>1485945646492</created>
@@ -468,7 +466,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128640000" />
+    <option name="totallyTimeSpent" value="129241000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -895,22 +893,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/showrecept.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="67" column="42" lean-forward="true" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+        <state relative-caret-position="748">
+          <caret line="80" column="4" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
           <folding>
-            <marker date="1487872669741" expanded="true" signature="69:84" ph="select id, N... Ingredienten" />
-            <marker date="1487872669741" expanded="true" signature="69:113" ph="select count... Ingredienten" />
-            <marker date="1487872669741" expanded="true" signature="895:946" ph="SELECT disti... Recept-Ingredient" />
-            <marker date="1487872669741" expanded="true" signature="1232:1305" ph="SELECT disti... Recept-Ingredient" />
-            <marker date="1487872669741" expanded="true" signature="1622:1732" ph="select id, n... tblrecepten" />
-            <marker date="1487872669741" expanded="true" signature="2038:2156" ph="select id, n... tblrecepten" />
-            <marker date="1487872669741" expanded="true" signature="2499:2648" ph="select id, n... tblrecepten" />
-            <marker date="1487872669741" expanded="true" signature="2757:2867" ph="select id, n... tblrecepten" />
-            <marker date="1487872669741" expanded="true" signature="3061:3565" ph="..." />
-            <marker date="1487872669741" expanded="true" signature="3095:3554" ph="{...}" />
-            <marker date="1487872669741" expanded="true" signature="3147:3441" ph="{...}" />
-            <marker date="1487872669741" expanded="true" signature="3483:3546" ph="{...}" />
-            <marker date="1487872669741" expanded="true" signature="3663:3675" ph="..." />
+            <marker date="1487873633830" expanded="true" signature="69:84" ph="select id, N... Ingredienten" />
+            <marker date="1487873633830" expanded="true" signature="69:113" ph="select count... Ingredienten" />
+            <marker date="1487873633830" expanded="true" signature="895:946" ph="SELECT disti... Recept-Ingredient" />
+            <marker date="1487873633830" expanded="true" signature="1232:1305" ph="SELECT disti... Recept-Ingredient" />
+            <marker date="1487873633830" expanded="true" signature="1622:1732" ph="select id, n... tblrecepten" />
+            <marker date="1487873633830" expanded="true" signature="2038:2156" ph="select id, n... tblrecepten" />
+            <marker date="1487873633830" expanded="true" signature="2499:2648" ph="select id, n... tblrecepten" />
+            <marker date="1487873633830" expanded="true" signature="2723:2833" ph="select id, n... tblrecepten" />
+            <marker date="1487873633830" expanded="true" signature="3027:3531" ph="..." />
+            <marker date="1487873633830" expanded="true" signature="3061:3520" ph="{...}" />
+            <marker date="1487873633830" expanded="true" signature="3113:3407" ph="{...}" />
+            <marker date="1487873633830" expanded="true" signature="3449:3512" ph="{...}" />
+            <marker date="1487873633830" expanded="true" signature="3629:3641" ph="..." />
           </folding>
         </state>
       </provider>
