@@ -54,14 +54,14 @@
 	</tr>
 	<tr>
 	<td width="40%"><label>Huidig passwoord</label></td>
-	<td width="60%"><input type="password" name="huidigPasswoord" class="txtField"/><span id="huidigPassword"  class="required"></span></td>
+	<td width="60%"><input type="password" name="huidigPasswoord" required data-errormessage-value-missing="Vul dit veld in" class="txtField"/><span id="huidigPasswoord"  class="required"></span></td>
 	</tr>
 	<tr>
 	<td><label>Nieuw Passwoord</label></td>
-	<td><input type="password" name="newPassword" class="txtField"/><span id="newPassword" class="required"></span></td>
+	<td><input type="password" name="newPasswoord" required data-errormessage-value-missing="Vul dit veld in" class="txtField"/><span id="newPasswoord" class="required"></span></td>
 	</tr>
 	<td><label>Bevestig nieuwe Passwoord</label></td>
-	<td><input type="password" name="confirmPassword" class="txtField"/><span id="confirmPassword" class="required"></span></td>
+	<td><input type="password" name="confirmPasswoord" required data-errormessage-value-missing="Vul dit veld in" class="txtField"/><span id="confirmPasswoord" class="required"></span></td>
 	</tr>
 	<tr>
 	<td colspan="2"><input class="zoekenreceptinput" type="submit" name="wijzigen" value="Wijzigen" class="btnSubmit"></td>
@@ -69,35 +69,40 @@
 	</table>
 
 </form>
-
-
-
 </form>
 </body></html>
+
 <?php
 include('db.php');
 if (isset($_POST['wijzigen']))
 {
-$password1 = mysqli_real_escape_string($conn, $_POST['newPassword']);
-$passwordencrypted = md5($password1);
-$password2 = mysqli_real_escape_string($conn, $_POST['confirmPassword']);
-$username = mysqli_real_escape_string($conn, $_SESSION['gebruiker']);
+		$username = $_SESSION['gebruiker'];
+        $passwoord = $_POST['huidigPasswoord'];
+        $huidigpasswoord_encrypted = md5($passwoord);
+        $newpasswoord = $_POST['newPasswoord'];
+        $confirmnewpasswoord = $_POST['confirmPasswoord'];
+        $newpasswoord_encrypted = md5($confirmnewpasswoord);
 
-$query = mysqli_query("select gebruiker, passwoord from Gebruikers where gebruiker='".$_SESSION['gebruiker']."'",$conn);
-
-if ($password1 != $password2)
-{
-    echo "Passwoorden zijn niet gelijk";
+        $query="SELECT * FROM Gebruikers WHERE gebruiker='$username' and passwoord='$huidigpasswoord_encrypted'";
+        $result=mysqli_query($conn, $query);
+        $count=mysqli_num_rows($result);
+        
+        if ($count==1) 
+        {
+            if($newpasswoord==$confirmnewpasswoord)
+            {
+        		$sql=mysqli_query($conn, "UPDATE Gebruikers SET passwoord='$newpasswoord_encrypted' WHERE gebruiker='$username'");
+        		header("location:index.php");
+        	}
+       		elseif($newpasswoord!=$confirmnewpasswoord)
+	    	{
+    	   		header("location:index.php");
+    	    }
+    	}
+    	else
+    	{
+    		echo 'Huidige passwoord komt niet overeen met hetgene in de database';
+    	}
 }
-else if (mysqli_query($conn, "UPDATE Gebruikers SET passwoord='$passwordencrypted' WHERE gebruiker='$username'"))
-{
-    echo "Instellingen zijn gewijzigd.";
-}
-else
-{
-    mysqli_error($conn);
-}
-}
-mysqli_close($conn);
-
+       mysqli_close($conn);
 ?>
