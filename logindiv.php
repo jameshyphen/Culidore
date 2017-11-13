@@ -87,7 +87,7 @@
             </div>
             <div class='loginpassje'>
                 <a class='passjetekst'>Wachtwoord</a></br>
-                <input type='password' name='passwoord' id='passwoord'>
+                <input type='password' name='password' id='password'>
             </div>
             <div class='btn'>
                 <input type='submit' name='BUTNlogin' value='Login' class='btnlogin'>

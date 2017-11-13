@@ -2,21 +2,21 @@
 if(isset($_GET['lv'])){
 
     if($_GET['lv']=='p'){
-        echo "Verkeerde wachtwoord of gebruikersnaam";
+        echo "Wrong username or password.";
     }}
 if(isset($_GET['pr'])){
 
     if($_GET['pr']=='p'){
-        echo "Verkeerde wachtwoord of gebruikersnaam";
+        echo "Wrong username or password.";
     }}
 if(isset($_GET['prob'])){
 
     if($_GET['prob']=='nf'){
-        echo "Probleem met probleem fixen";
+        echo "Error";
     }}
 if(isset($_GET['e'])){
     if($_GET['e']=='pp'){
-        echo "Accountmaken tijdelijk uitgeschakeld!";
+        echo "Account registration is disabled at this instance.";
     }
 
 }

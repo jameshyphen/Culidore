@@ -4,15 +4,15 @@ include('db.php');
 session_start();
 // username and password sent from form 
 $gebruiker=$_POST['gebruiker']; 
-$passwoord=$_POST['passwoord']; 
+$password=$_POST['password']; 
 
 // To protect MySQL injection (more detail about MySQL injection)
 $gebruiker = stripslashes($gebruiker);
-$passwoord = stripslashes($passwoord);
+$password = stripslashes($password);
 $gebruiker = mysqli_real_escape_string($conn, $gebruiker);
-$passwoord = mysqli_real_escape_string($conn, $passwoord);
-$encryptpass = md5($passwoord);
-$sql="SELECT * FROM Gebruikers WHERE gebruiker='$gebruiker' and passwoord='$encryptpass'";
+$password = mysqli_real_escape_string($conn, $password);
+$encryptpass = md5($password);
+$sql = "SELECT * FROM culidore.Gebruikers WHERE gebruiker='$gebruiker' and password='$encryptpass'";
 $result=mysqli_query($conn, $sql);
 
 function is_user_logged_in() {
@@ -25,7 +25,7 @@ function is_user_logged_in() {
 $count=mysqli_num_rows($result);
 
 
-// If result matched $gebruiker and $passwoord, table row must be 1 row
+// If result matched $gebruiker and $password, table row must be 1 row
 if($count==1){
 	if ($result = mysqli_query($conn, $vraag))
 	{
