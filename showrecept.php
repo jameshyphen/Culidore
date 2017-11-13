@@ -5,7 +5,7 @@ if(isset($_GET['zoek'])){
     $vraag512 = "select count(id) as aantal from Ingredienten";
         if ($result23 = mysqli_query($conn, $vraag512)) {
             while ($row = mysqli_fetch_assoc($result23)) {
-                $aantalingredienten=$row['aantal'];
+                $numofingredients=$row['aantal'];
 
             }
         }
@@ -15,7 +15,7 @@ if(isset($_GET['zoek'])){
 
         $NBI = array();
         $NBR = array();
-        for($x=1;$x<=$aantalingredienten;$x++){
+        for($x=1;$x<=$numofingredientsredienten;$x++){
             if(isset($_GET['ingredient'.$x])){
                 $NBI[$x]=$x;
             }

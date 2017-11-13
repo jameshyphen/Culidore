@@ -15,8 +15,8 @@ if (isset($_SESSION['username']))
     $location = "index.php";
     $rating = "0";
     $datum = date("Y-n-d");
-    $aantalingredienten = $_POST['aantaling'];
-    for($x=1;$x<=$aantalingredienten;$x++){
+    $numofingredients = $_POST['numofingredients'];
+    for($x=1;$x<=$numofingredients;$x++){
         $ingredienten[$x] = $_POST['ingredient'.$x];
     }
     $ingredienten=array_unique($ingredienten);

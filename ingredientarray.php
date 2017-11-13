@@ -1,7 +1,7 @@
 <body onload="createSelect();">
 <script src="jquery-3.1.1.min.js"></script>
 <?php
-include('db.php');
+include('db.php');//connect to the database for ingredients
 if ($conn) {
     $vraag = "select id, name from culidore.ingredients";
     if ($result = mysqli_query($conn, $vraag)) {
@@ -16,7 +16,7 @@ if ($conn) {
     }
 }
 ?>
-<input name="aantaling" id="idinput" type="hidden" />
+<input name="numofingredients" id="idinput" type="hidden" />
 <div id="demo"></div>
 
 <div id="deldem"></div>
