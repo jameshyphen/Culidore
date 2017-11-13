@@ -2,8 +2,8 @@
 include('db.php');
 if ($conn)
 {
-    if(isset($_SESSION['gebruiker'])){
-        $vraag = "select id, admin from Gebruikers where gebruiker='".$_SESSION['gebruiker']."'";
+    if(isset($_SESSION['username'])){
+        $vraag = "select id, admin from Gebruikers where gebruiker='".$_SESSION['username']."'";
         if ($result = mysqli_query($conn, $vraag)) {
             while ($row = mysqli_fetch_assoc($result)){
                 if($row['admin']==1){

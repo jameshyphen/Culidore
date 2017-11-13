@@ -70,8 +70,8 @@
 include('db.php');
 if ($conn)
 {
-    if(isset($_SESSION['gebruiker'])){
-        $vraag = "select id, admin from Gebruikers where gebruiker='".$_SESSION['gebruiker']."'";
+    if(isset($_SESSION['username'])){
+        $vraag = "select id, admin from Gebruikers where gebruiker='".$_SESSION['username']."'";
         if ($result = mysqli_query($conn, $vraag)) {
             while ($row = mysqli_fetch_assoc($result)){
                 if($row['admin']==1){
@@ -80,7 +80,7 @@ if ($conn)
             }}}}
 if ($conn)
 {
-    $vraag = "select voornaam, achternaam, email from Gebruikers where gebruiker='".$_SESSION['gebruiker']."'";
+    $vraag = "select voornaam, achternaam, email from Gebruikers where gebruiker='".$_SESSION['username']."'";
     echo "<div class='mainpagina' onclick='closelogintje();'>
         <div class='venster'>
         </div>";
@@ -118,14 +118,14 @@ mysqli_close($conn);
     <ul>
         <a href="index.php"><img  src="Finished.png" alt="logo"></a>
         <?php
-        if(isset($_SESSION['gebruiker'])){
+        if(isset($_SESSION['username'])){
             echo " <a class=\"circle\" href=\"#\">+</a>";
         }?>
         <?php
 
-        if (isset($_SESSION['gebruiker']))
+        if (isset($_SESSION['username']))
         {
-            $gebruiker = $_SESSION['gebruiker'];
+            $gebruiker = $_SESSION['username'];
             ?>
 
 
@@ -193,7 +193,7 @@ mysqli_close($conn);
             }
             echo "</a>";
             echo "</div>";
-            if(isset($_SESSION['gebruiker'])){?>
+            if(isset($_SESSION['username'])){?>
     </div><div class='gelogged'>
         <div class='accountinstellingen'><ul>
                 <li><a style='cursor:pointer' class='instellingen'>Instellingen</a></li>

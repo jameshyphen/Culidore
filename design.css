@@ -223,27 +223,27 @@ body{
 
 
 
-.divvoornaam {
+.FirstnameDiv {
 
 	position:absolute;
 
 }
-.divachternaam {
+.SurnameDiv {
 
 	position:relative;
 	margin-left:180px;
 
 }
-.divusername {
+.UsernameDiv {
 	position:relative;
 }
-.ww1 {
+.PassDiv {
 	position:relative;
 }
-.divemail {
+.EmailDiv {
 	position:relative;
 }
-.ww2 {
+.Pass2Div {
 	position:relative;
 
 }
@@ -262,7 +262,7 @@ body{
 	position:relative;
 }
 
-.allesformreg div {
+.RegistrationformClass div {
 
 	padding-top:10px;
 }

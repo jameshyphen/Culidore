@@ -1,5 +1,5 @@
 <?php
-if(isset($_SESSION['gebruiker'])){?>
+if(isset($_SESSION['username'])){?>
 <div class='gelogged'>
     <div class='accountinstellingen'><ul>
             <li><a style='cursor:pointer' class='instellingen'>Instellingen</a></li>

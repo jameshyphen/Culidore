@@ -2,7 +2,7 @@
 include('db.php');
 session_start();
 
-    $gebruiker = $_SESSION['gebruiker'];
+    $gebruiker = $_SESSION['username'];
 
     $probleem = $_POST['probleembeschrijf'];
 

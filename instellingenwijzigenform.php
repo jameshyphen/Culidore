@@ -7,7 +7,7 @@
 	include('db.php');
 	if ($conn) 
 	{
-		$vraag='select * from Gebruikers where gebruiker="'.$_SESSION['gebruiker'].'"';
+		$vraag='select * from Gebruikers where gebruiker="'.$_SESSION['username'].'"';
 
 		if ($result = mysqli_query($conn,$vraag)) 
 		{
@@ -76,7 +76,7 @@
 include('db.php');
 if (isset($_POST['wijzigen']))
 {
-		$username = $_SESSION['gebruiker'];
+		$username = $_SESSION['username'];
         $passwoord = $_POST['huidigPasswoord'];
         $huidigpasswoord_encrypted = md5($passwoord);
         $newpasswoord = $_POST['newPasswoord'];

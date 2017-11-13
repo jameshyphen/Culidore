@@ -5,42 +5,41 @@
             if(isset($_GET['e'])){
 
                 if($_GET['e']=='p'){
-                    echo "De wachtwoorden zijn niet gelijk aan elkaar";
+                    echo "The passwords do not match."; //view error message pass!=pass2
                 }
                 if($_GET['e']=='m'){
-                    echo "De e-mail dat je ingegeven hebt is al geregistreerd";
+                    echo "E-mail address already registered."; //view error message email registered
                 }
             }
             ?>
         </a>
     </div>
 
-    <form class="allesformreg" style="overflow-y: scroll;" action="registratie.php?loc=index" method="Post">
+    <form class="RegistrationformClass" style="overflow-y: scroll;" action="registratie.php?loc=index" method="Post">
 
-        <div class="divvoornaam">
-            <a class="voornaam">Voornaam</a></br>
-            <input type="txtText" name="voor" id="VNT" required data-errormessage-value-missing="Vul dit veld in">
-
+        <div class="FirstnameDiv">
+            <a>Firstname</a></br>
+            <input type="txtText" name="firstname" id="VNT" required data-errormessage-value-missing="<b>*</b>This field cannot be empty.">
         </div>
-        <div class="divachternaam">
-            <a class="achternaam">Achternaam</a></br>
-            <input type="txtText" name="achter" id="ANT" required="" >
+        <div class="SurnameDiv">
+            <a>Surname</a></br>
+            <input type="txtText" name="surname" id="ANT" required="" >
         </div>
-        <div class="divemail">
-            <a class="emaillabel">E-mail adress</a></br>
-            <input class="inputje" type="email" placeholder="example@email.com" name="email" required data-errormessage-value-missing="Vul dit veld in" data-errormessage-type-mismatch="Foute e-mail adress!">
+        <div class="EmailDiv">
+            <a>E-mail address</a></br>
+            <input class="inputje" type="email" placeholder="example@email.com" name="email" required data-errormessage-value-missing="<b>*</b>This field cannot be empty." data-errormessage-type-mismatch="Not a valid e-mail address.">
         </div>
-        <div class="divusername">
-            <a class="usernamelabel">Gebruikersnaam</a></br>
-            <input class="inputje" type="txtText" name="gebruiker"  required data-errormessage-value-missing="Vul dit veld in">
+        <div class="UsernameDiv">
+            <a>Username</a></br>
+            <input class="inputje" type="txtText" name="username"  required data-errormessage-value-missing="<b>*</b>This field cannot be empty.">
         </div>
-        <div class="ww1">
-            <a class="wachtwoordlabel">Wachtwoord</a></br>
-            <input class="inputje" type="password" name="pass"  required data-errormessage-value-missing="Vul dit veld in" >
+        <div class="PassDiv">
+            <a>Password</a></br>
+            <input class="inputje" type="password" name="pass"  required data-errormessage-value-missing="<b>*</b>This field cannot be empty." >
         </div>
-        <div class="ww2">
-            <a class="wachtwoordagainlabel">Wachtwoord opnieuw invoeren</a></br>
-            <input class="inputje" type="password" name="opnieuw"  required data-errormessage-value-missing="Vul dit veld in" >
+        <div class="Pass2Div">
+            <a>Repeat your password</a></br>
+            <input class="inputje" type="password" name="pass2"  required data-errormessage-value-missing="<b>*</b>This field cannot be empty." >
         </div>
         <div class="btn">
             <input type="submit" name="BUTN" value="Registreren" class="btnRegister">

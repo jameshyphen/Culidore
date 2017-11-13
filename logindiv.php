@@ -61,7 +61,7 @@
             }
             echo "</a>";
             echo "</div>";
-            if(isset($_SESSION['gebruiker'])){?>
+            if(isset($_SESSION['username'])){?>
     </div>
     <div class='gelogged'>
         <div class='accountinstellingen'><ul>
@@ -82,8 +82,8 @@
 
         <form class='formlogin' action='login.php'  method='Post'>
             <div class='loginuser'>
-                <a class='usertekst'>Gebruikersnaam</a></br>
-                <input type='txtText' name='gebruiker' id='gebruiker'>
+                <a class='usertekst'>Username</a></br>
+                <input type='txtText' name='username' id='gebruiker'>
             </div>
             <div class='loginpassje'>
                 <a class='passjetekst'>Wachtwoord</a></br>

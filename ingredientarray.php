@@ -3,11 +3,11 @@
 <?php
 include('db.php');
 if ($conn) {
-    $vraag = "select id, Naam from Ingredienten";
+    $vraag = "select id, name from culidore.ingredients";
     if ($result = mysqli_query($conn, $vraag)) {
         $id=0;
         while ($row = mysqli_fetch_assoc($result)) {
-            $ingredienten[$id]=$row['Naam'];
+            $ingredienten[$id]=$row['name'];
             $id++;
         }
     }

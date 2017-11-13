@@ -3,9 +3,9 @@ include('db.php');
 session_start();
 if ($conn) 
 {
-if (isset($_SESSION['gebruiker']))
+if (isset($_SESSION['username']))
 {
-    $gebruiker = $_SESSION['gebruiker'];
+    $gebruiker = $_SESSION['username'];
     $titel = $_POST['Titel'];
     $omschrijving = $_POST['Omschrijving'];
     $prijs = $_POST['Prijs'];

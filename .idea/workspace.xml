@@ -162,7 +162,7 @@
       <find>min-h</find>
       <find>min</find>
       <find>=</find>
-      <find>&lt;?php         if(isset($_SESSION['gebruiker'])){             echo &quot; &quot;;             }?&gt;</find>
+      <find>&lt;?php         if(isset($_SESSION['username'])){             echo &quot; &quot;;             }?&gt;</find>
       <find>fotosss</find>
       <find>index</find>
       <find>mainp</find>

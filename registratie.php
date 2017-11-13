@@ -1,17 +1,17 @@
 <?php
 include('db.php');
 
-$voornaam = $_POST['voor'];
-$achternaam = $_POST['achter'];
-$gebruiker = $_POST['gebruiker'];
+$firstname = $_POST['firstname'];
+$surname = $_POST['surname'];
+$username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['pass'];
-$passwordopnieuw = $_POST['opnieuw'];\
+$passwordopnieuw = $_POST['pass2'];\
 $encryptpass = md5($password);
 $location = "index.php?";
 
 // Check if user email is already registered
-$vraag = "SELECT email FROM Gebruikers WHERE email='" . $email . "'";
+$vraag = "SELECT email FROM usernames WHERE email='" . $email . "'";
 $result = mysqli_query($conn, $vraag);
 
 if($row = mysqli_num_rows($result)){
@@ -23,7 +23,7 @@ else if($password == $passwordopnieuw)
 {
     // Make a user account
     
-    $sql = "INSERT INTO culidore.Gebruikers(voornaam, achternaam, gebruiker, email, password, admin) VALUES('$voornaam', '$achternaam', '$gebruiker', '$email', '$encryptpass', 0)";
+    $sql = "INSERT INTO culidore.usernames(firstname, surname, username, email, password, admin) VALUES('$firstname', '$surname', '$username', '$email', '$encryptpass', 0)";
     if(mysqli_query($conn, $sql)){
         header("location: index.php?e=s&l=1"); // Go back to the index page with Success message
     }
