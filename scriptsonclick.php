@@ -89,7 +89,7 @@
     });
     function confirmationDelete(anchor)
     {
-        var conf = confirm('Wil jij dit recept zeker verwijderen?');
+        var conf = confirm('Weet je zeker dat je dit recept wilt verwijderen?');
         if(conf)
             window.location=anchor.attr("href");
     }
